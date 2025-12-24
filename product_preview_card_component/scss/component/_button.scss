@@ -1,0 +1,28 @@
+@use "../abstract/_vars";
+@use "sass:map";
+
+.btn {
+    width: 100%;
+    background-color: map.get(vars.$green, 500);
+    border-radius: 0.5rem;
+    color: vars.$white;
+
+    &__shopping {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: map.get(vars.$spacing, 200) 0;
+    }
+
+    &__svg {
+        margin-right: map.get(vars.$spacing, 100);
+    }
+
+    &:hover {
+        background-color: map.get(vars.$green, 700);
+    }
+
+    &:active {
+        transform: translate(3px, 3px)
+    }
+}

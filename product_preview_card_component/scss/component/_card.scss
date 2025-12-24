@@ -8,6 +8,7 @@
     max-width: 350px;
     border-radius: 0.5rem;
     overflow: hidden;
+    margin: 0 auto;
 
     &__img {
         width: 100%;
@@ -25,6 +26,25 @@
 
         .card__product_category {
             text-transform: uppercase;
+        }
+
+        .card__product_name {
+            color: vars.$black;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+
+        .card__current_price {
+            color: map.get(vars.$green, 500);
+            margin-right: map.get(vars.$spacing, 200);
+        }
+
+        .card__original_price {
+            color: vars.$grey;
+            text-decoration: line-through;
         }
     }
 }

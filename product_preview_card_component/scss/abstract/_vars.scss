@@ -6,8 +6,8 @@ $grey: #6C7289;
 $cream: #F2EAE2;
 $white: #FFFFFF;
 $green: (
-    "500": #3D8168,
-    "700": #1A4032
+    500: #3D8168,
+    700: #1A4032
 );
 
 /* TYPOGRAPHY */
@@ -60,7 +60,6 @@ $spacing: (
     font-weight: map.get($fw, "bold");
     font-size: map.get($fs, 32);
     line-height: 100%;
-    color: $black;
 }
 
 .text_preset_2 {
