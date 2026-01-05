@@ -1,4 +1,4 @@
-@use "../../abstract/_vars";
+@use "../../abstract/vars";
 @use "sass:map";
 
 .intro_text {
@@ -6,13 +6,13 @@
     margin: map.get(vars.$spacing, 650) auto map.get(vars.$spacing, 675);
 
     .intro_text__addition {
-        margin-bottom: map.get(vars.$spacing, 200);
+        margin-block-end: map.get(vars.$spacing, 200);
     }
 }
 
 @media screen and (min-width: 48em) {
     .intro_text {
-        max-width: 33.75em;
+        max-inline-size: 33.75em;
         margin: map.get(vars.$spacing, 825) auto map.get(vars.$spacing, 1000);
     }
 

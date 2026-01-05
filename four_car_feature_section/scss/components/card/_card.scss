@@ -1,18 +1,25 @@
-@use "../../abstract/_vars";
+@use "../../abstract/vars";
+@use "../../base/base";
 @use "sass:map";
 
 .grid {
     display: grid;
     gap: map.get(vars.$spacing, 400);
-    margin-bottom: map.get(vars.$spacing, 675);
+    margin-block-end: map.get(vars.$spacing, 675);
 
     .grid_item {
         min-height: 14.688em;
-        width: 19.625em;
+        inline-size: 19.625em;
         border-radius: .5em;
         box-shadow: 0 0.938em 30px -11px vars.$light_cyan;
         overflow: hidden;
         transition: all .3s ease;
+
+        @media (prefers-reduced-motion: reduce) {
+            .grid_item {
+                transition: none;
+            }
+        }
 
         &:hover {
             transform: scale(1.1);
@@ -23,27 +30,23 @@
         }
 
         &__title {
-            margin-bottom: map.get(vars.$spacing, 75);
+            margin-block-end: map.get(vars.$spacing, 75);
         }
 
         &__text {
-            width: 100%;
-            max-width: 15.625em;
-            margin-bottom: map.get(vars.$spacing, 400);
+            inline-size: 100%;
+            max-inline-size: 15.625em;
+            margin-block-end: map.get(vars.$spacing, 400);
         }
 
         &__img {
             display: block;
-            margin-left: auto;
-        }
-
-        .color_line {
-            width: 100%;
-            height: .25em;
+            margin-inline-start: auto;
         }
 
         &:nth-of-type(1) {
-            .color_line {
+            .color_line--highlight {
+                @extend .color_line;
                 background-color: vars.$cyan;
             }
         }
@@ -51,7 +54,8 @@
         &:nth-of-type(2) {
             grid-row-start: 2;
 
-            .color_line {
+            .color_line--highlight {
+                @extend .color_line;
                 background-color: vars.$red;
             }
         }
@@ -59,7 +63,8 @@
         &:nth-of-type(3) {
             grid-row-start: 3;
 
-            .color_line {
+            .color_line--highlight {
+                @extend .color_line;
                 background-color: vars.$orange;
             }
         }
@@ -67,7 +72,8 @@
         &:nth-of-type(4) {
             grid-row-start: 4;
 
-            .color_line {
+            .color_line--highlight {
+                @extend .color_line;
                 background-color: vars.$blue;
             }
         }
@@ -77,7 +83,7 @@
 @media screen and (min-width: 48em) {
 
     .grid {
-        margin-bottom: map.get(vars.$spacing, 1000);
+        margin-block-end: map.get(vars.$spacing, 1000);
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
 
@@ -108,13 +114,13 @@
 @media screen and (min-width: 87.5em) {
 
     .grid {
-        margin-bottom: map.get(vars.$spacing, 2000);
+        margin-block-end: map.get(vars.$spacing, 2000);
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
 
         .grid_item {
-            min-height: 15.625em;
-            width: 21.875em;
+            min-block-size: 15.625em;
+            inline-size: 21.875em;
 
             &:nth-of-type(1) {
                 grid-area: 1 / 1 / -1 / -1;

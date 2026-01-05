@@ -2,19 +2,24 @@
 @use "sass:map";
 
 .container {
-    width: 100%;
-    max-width: 19.75em;
+    inline-size: 100%;
+    max-inline-size: 19.75em;
     margin: 0 auto;
+}
+
+.color_line {
+    inline-size: 100%;
+    block-size: .25em;
 }
 
 @media screen and (min-width: 48em) {
     .container {
-        max-width: 41.25em;
+        max-inline-size: 41.25em;
     }
 }
 
 @media screen and (min-width: 87.5em) {
     .container {
-        max-width: 69.625em;
+        max-inline-size: 69.625em;
     }
 }
