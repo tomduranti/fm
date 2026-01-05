@@ -13,7 +13,7 @@
         border-radius: .5em;
         box-shadow: 0 0.938em 30px -11px vars.$light_cyan;
         overflow: hidden;
-        transition: all .3s ease;
+        transition: transform .3s ease;
 
         @media (prefers-reduced-motion: reduce) {
             .grid_item {

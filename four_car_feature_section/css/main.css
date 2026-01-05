@@ -87,7 +87,7 @@
   border-radius: 0.5em;
   box-shadow: 0 0.938em 30px -11px #83A6D2;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .grid .grid_item .grid_item {
