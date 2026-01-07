@@ -13,3 +13,10 @@
         margin: map.get(vars.$spacing, 1015) map.get(vars.$spacing, 675) map.get(vars.$spacing, 1315);
     }
 }
+
+@media screen and (min-width: 90em) {
+    .container {
+        max-inline-size: 69.625em;
+        margin: 9.313em auto;
+    }
+}
