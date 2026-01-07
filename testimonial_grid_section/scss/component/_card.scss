@@ -14,13 +14,66 @@
 
     &__item {
         border-radius: .5em;
-        box-shadow: 40px 60px 50px map.get(vars.$grey, 500);
+        box-shadow: 40px 60px 50px rgba(0, 0, 0, .2);
         overflow: hidden;
-        transition: transform .3s ease;
 
         &--job_offer {
             background-color: map.get(vars.$purple, 500);
             color: vars.$white;
+
+            & .grid__verified,
+            & .grid__history {
+                color: map.get(vars.$purple, 50);
+            }
+        }
+
+        &--support_team {
+            background-color: map.get(vars.$grey, 500);
+            color: vars.$white;
+
+            & .grid__verified {
+                color: map.get(vars.$grey, 300);
+            }
+
+            & .grid__history {
+                color: map.get(vars.$grey, 100);
+            }
+        }
+
+        &--experience {
+            background-color: vars.$white;
+            color: map.get(vars.$grey, 500);
+
+            & .grid__verified,
+            & .grid__history {
+                color: map.get(vars.$grey, 400);
+            }
+        }
+
+        &--teaching {
+            background-color: vars.$dark_blue;
+            color: vars.$white;
+
+            & .grid__highlights {
+                color: map.get(vars.$grey, 200);
+            }
+
+            & .grid__history {
+                color: map.get(vars.$grey, 100);
+            }
+        }
+
+        &--life_change {
+            background-color: vars.$white;
+            color: map.get(vars.$grey, 500);
+
+            & .grid__verified {
+                color: map.get(vars.$grey, 300);
+            }
+
+            & .grid__history {
+                color: map.get(vars.$grey, 400);
+            }
         }
     }
 
@@ -28,17 +81,30 @@
         display: flex;
         gap: map.get(vars.$spacing, 225);
         margin-block-end: map.get(vars.$spacing, 200);
+    }
 
-        img {
-            inline-size: 28px;
-            block-size: 28px;
-            border-radius: 50%;
-            outline: 3px solid map.get(vars.$purple, 300);
-            box-shadow: 0 4px 4px vars.$black;
+    &__avatar_img {
+        inline-size: 28px;
+        block-size: 28px;
+        border-radius: 50%;
+        outline: 3px solid transparent;
+        box-shadow: 0 4px 4px vars.$black;
+
+
+        &--colored_300 {
+            outline-color: map.get(vars.$purple, 300);
+        }
+
+        &--colored_500 {
+            outline-color: map.get(vars.$purple, 500);
         }
     }
 
     &__fullname {
         margin-block-end: map.get(vars.$spacing, 50);
+    }
+
+    &__highlights {
+        margin-block-end: map.get(vars.$spacing, 200);
     }
 }

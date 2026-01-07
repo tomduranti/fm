@@ -47,26 +47,74 @@
 }
 .grid__item {
   border-radius: 0.5em;
-  box-shadow: 40px 60px 50px #48556A;
+  box-shadow: 40px 60px 50px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  transition: transform 0.3s ease;
 }
 .grid__item--job_offer {
   background-color: #733FC8;
   color: #FFFFFF;
+}
+.grid__item--job_offer .grid__verified, .grid__item--job_offer .grid__history {
+  color: #EDE4FF;
+}
+.grid__item--support_team {
+  background-color: #48556A;
+  color: #FFFFFF;
+}
+.grid__item--support_team .grid__verified {
+  color: #A3AAB4;
+}
+.grid__item--support_team .grid__history {
+  color: #E7EAEE;
+}
+.grid__item--experience {
+  background-color: #FFFFFF;
+  color: #48556A;
+}
+.grid__item--experience .grid__verified, .grid__item--experience .grid__history {
+  color: #676D7E;
+}
+.grid__item--teaching {
+  background-color: #19202D;
+  color: #FFFFFF;
+}
+.grid__item--teaching .grid__highlights {
+  color: #CFCFCF;
+}
+.grid__item--teaching .grid__history {
+  color: #E7EAEE;
+}
+.grid__item--life_change {
+  background-color: #FFFFFF;
+  color: #48556A;
+}
+.grid__item--life_change .grid__verified {
+  color: #A3AAB4;
+}
+.grid__item--life_change .grid__history {
+  color: #676D7E;
 }
 .grid__avatar {
   display: flex;
   gap: 1.063em;
   margin-block-end: 1em;
 }
-.grid__avatar img {
+.grid__avatar_img {
   inline-size: 28px;
   block-size: 28px;
   border-radius: 50%;
-  outline: 3px solid #A775F1;
+  outline: 3px solid transparent;
   box-shadow: 0 4px 4px #121212;
+}
+.grid__avatar_img--colored_300 {
+  outline-color: #A775F1;
+}
+.grid__avatar_img--colored_500 {
+  outline-color: #733FC8;
 }
 .grid__fullname {
   margin-block-end: 0.25em;
+}
+.grid__highlights {
+  margin-block-end: 1em;
 }
