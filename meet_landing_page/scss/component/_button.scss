@@ -1,0 +1,12 @@
+@use "../abstract/vars";
+@use "sass:map";
+
+@mixin button--mod($bg_color) {
+    border-radius: 29px;
+    color: vars.$white;
+    background-color: $bg_color;
+    padding: map.get(vars.$spacing, 200) map.get(vars.$spacing, 500);
+}
+
+.button--cyan_600 { @include button--mod(map.get(vars.$cyan, 600)); }
+.button--purple_600 { @include button--mod(map.get(vars.$purple, 600)); }

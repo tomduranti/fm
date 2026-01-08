@@ -35,25 +35,27 @@ $fs: (
 );
 
 $spacing: (
-    50: 0.25em,  // 4px
-    100: 0.5em,  // 8px
-    200: 1em,    // 16px
-    300: 1.5em,  // 24px
-    400: 2em,    // 32px
-    500: 2.5em,  // 40px
-    700: 3.5em,  // 76px
-    800: 4em,    // 64px
-    900: 4.5em,  // 72px
-    1000: 5em,   // 80px
-    1400: 7em   // 113px
+    50: 0.25rem,  // 4px
+    100: 0.5rem,  // 8px
+    200: 1rem,    // 16px
+    300: 1.5rem,  // 24px
+    400: 2rem,    // 32px
+    500: 2.5rem,  // 40px
+    600: 3rem,    // 48px
+    700: 3.5rem,  // 76px
+    800: 4rem,    // 64px
+    900: 4.5rem,  // 72px
+    1000: 5rem,   // 80px
+    1400: 7rem   // 113px
 );
 
 /* UTILS */
 .text_preset_1 {
     font-family: $font_family;
     font-weight: map.get($fw, "black");
-    font-size: map.get($fs, 64);
+    font-size: map.get($fs, 40);
     line-height: 110%;
+    color: map.get($slate, 900);
 }
 
 .text_preset_2 {
@@ -74,8 +76,9 @@ $spacing: (
 .text_preset_4 {
     font-family: $font_family;
     font-weight: map.get($fw, "medium");
-    font-size: map.get($fs, 18);
+    font-size: map.get($fs, 16);
     line-height: 110%;
+    color: map.get($slate, 600);
 }
 
 .text_preset_5 {
@@ -83,4 +86,8 @@ $spacing: (
     font-weight: map.get($fw, "black");
     font-size: map.get($fs, 16);
     line-height: 150%;
+}
+
+.color_cyan_300 {
+    color: map.get($cyan, 300);
 }

@@ -4,8 +4,9 @@
 .text_preset_1 {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 2.5rem;
   line-height: 110%;
+  color: #28283D;
 }
 
 .text_preset_2 {
@@ -26,8 +27,9 @@
 .text_preset_4 {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 110%;
+  color: #87879D;
 }
 
 .text_preset_5 {
@@ -37,40 +39,64 @@
   line-height: 150%;
 }
 
-.button--purple_300, .button--purple_600_no_version_text, .button--purple_600, .button--cyan_300, .button--cyan_600 {
-  border-radius: 29px;
-  padding: 2.5em 1em;
-  color: #FAFAFA;
+.color_cyan_300 {
+  color: #8FE3F9;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+}
+
+.container {
+  inline-size: 100%;
+  max-inline-size: 19.063em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-block-end: 4rem;
+}
+
+.logo {
+  margin-block-start: 3rem;
+}
+
+.hero__img {
+  margin-block-end: 3rem;
+  max-inline-size: 100%;
+}
+.hero .text_breaker {
+  display: block;
+}
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.hero__cta_group {
+  max-inline-size: 12.063rem;
+}
+.hero__cta_group button:first-child {
+  margin-block-end: 1rem;
 }
 
 .button--cyan_600 {
+  border-radius: 29px;
+  color: #FAFAFA;
   background-color: #4D96A9;
-}
-.button--cyan_600:nth-child(2) {
-  color: #8FE3F9;
-}
-
-.button--cyan_300 {
-  background-color: #8FE3F9;
-}
-.button--cyan_300:nth-child(2) {
-  color: #8FE3F9;
+  padding: 1rem 2.5rem;
 }
 
 .button--purple_600 {
+  border-radius: 29px;
+  color: #FAFAFA;
   background-color: #855FB1;
-}
-.button--purple_600:nth-child(2) {
-  color: #D9B8FF;
-}
-
-.button--purple_600_no_version_text {
-  background-color: #855FB1;
-}
-
-.button--purple_300 {
-  background-color: #D9B8FF;
-}
-.button--purple_300:nth-child(2) {
-  color: #D9B8FF;
+  padding: 1rem 2.5rem;
 }

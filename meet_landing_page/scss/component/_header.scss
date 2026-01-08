@@ -1,0 +1,13 @@
+@use "../abstract/vars";
+@use "sass:map";
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-block-end: map.get(vars.$spacing, 800);
+}
+
+.logo {
+    margin-block-start: map.get(vars.$spacing, 600);
+}
