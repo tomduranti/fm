@@ -30,6 +30,7 @@ $fw: (
 $fs: (
     16: 1rem,
     18: 1.125rem,
+    32: 2rem,
     40: 2.5rem,
     64: 4rem,
 );
@@ -61,7 +62,7 @@ $spacing: (
 .text_preset_2 {
     font-family: $font_family;
     font-weight: map.get($fw, "black");
-    font-size: map.get($fs, 40);
+    font-size: map.get($fs, 32);
     line-height: 110%;
 }
 
@@ -77,7 +78,7 @@ $spacing: (
     font-family: $font_family;
     font-weight: map.get($fw, "medium");
     font-size: map.get($fs, 16);
-    line-height: 110%;
+    line-height: 140%;
     color: map.get($slate, 600);
 }
 
@@ -90,4 +91,8 @@ $spacing: (
 
 .color_cyan_300 {
     color: map.get($cyan, 300);
+}
+
+.margin_left--2 {
+    margin-inline-start: 0.156rem;
 }

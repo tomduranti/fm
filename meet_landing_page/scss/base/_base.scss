@@ -9,7 +9,7 @@ body {
 
 .container {
     inline-size: 100%;
-    max-inline-size: 19.063em;
+    max-inline-size: 19.438em;
     margin: 0 auto;
     text-align: center;
 }
@@ -18,4 +18,8 @@ body {
   display: flex;
   justify-content: center;
   margin-block-end: map.get(vars.$spacing, 600);
+}
+
+.section_img--large-bottom {
+  margin-block-end: map.get(vars.$spacing, 800);
 }

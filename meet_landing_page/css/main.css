@@ -12,7 +12,7 @@
 .text_preset_2 {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 110%;
 }
 
@@ -28,7 +28,7 @@
   font-family: "Red Hat Display", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  line-height: 110%;
+  line-height: 140%;
   color: #87879D;
 }
 
@@ -43,6 +43,10 @@
   color: #8FE3F9;
 }
 
+.margin_left--2 {
+  margin-inline-start: 0.156rem;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -51,7 +55,7 @@ body {
 
 .container {
   inline-size: 100%;
-  max-inline-size: 19.063em;
+  max-inline-size: 19.438em;
   margin: 0 auto;
   text-align: center;
 }
@@ -60,6 +64,10 @@ body {
   display: flex;
   justify-content: center;
   margin-block-end: 3rem;
+}
+
+.section_img--large-bottom {
+  margin-block-end: 4rem;
 }
 
 .header {
@@ -90,6 +98,35 @@ body {
 }
 .hero__cta_group button:first-child {
   margin-block-end: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 9.219rem);
+  gap: 1rem;
+  margin-block-end: 4rem;
+}
+.grid__item {
+  inline-size: 147.5px;
+}
+.grid__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.showcase__text {
+  margin-block-end: 2rem;
+}
+.showcase__intro {
+  text-transform: uppercase;
+  color: #4D96A9;
+  margin-block-end: 1rem;
+}
+.showcase__slogan {
+  color: #28283D;
+  margin-block-end: 2rem;
 }
 
 .button--cyan_600 {
