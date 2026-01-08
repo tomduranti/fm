@@ -1,0 +1,76 @@
+/* COLOR */
+/* TYPOGRAPHY */
+/* UTILS */
+.text_preset_1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 110%;
+}
+
+.text_preset_2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 110%;
+}
+
+.text_preset_3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 110%;
+  letter-spacing: 0.25rem;
+}
+
+.text_preset_4 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 110%;
+}
+
+.text_preset_5 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+.button--purple_300, .button--purple_600_no_version_text, .button--purple_600, .button--cyan_300, .button--cyan_600 {
+  border-radius: 29px;
+  padding: 2.5em 1em;
+  color: #FAFAFA;
+}
+
+.button--cyan_600 {
+  background-color: #4D96A9;
+}
+.button--cyan_600:nth-child(2) {
+  color: #8FE3F9;
+}
+
+.button--cyan_300 {
+  background-color: #8FE3F9;
+}
+.button--cyan_300:nth-child(2) {
+  color: #8FE3F9;
+}
+
+.button--purple_600 {
+  background-color: #855FB1;
+}
+.button--purple_600:nth-child(2) {
+  color: #D9B8FF;
+}
+
+.button--purple_600_no_version_text {
+  background-color: #855FB1;
+}
+
+.button--purple_300 {
+  background-color: #D9B8FF;
+}
+.button--purple_300:nth-child(2) {
+  color: #D9B8FF;
+}

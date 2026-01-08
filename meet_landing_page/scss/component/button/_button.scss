@@ -1,0 +1,24 @@
+@use "../../abstract/vars";
+@use "sass:map";
+
+%button {
+    border-radius: 29px;
+    padding: map.get(vars.$spacing, 500) map.get(vars.$spacing, 200);
+    color: vars.$white;
+}
+
+@mixin button--mod($bg_color, $version_text:null) {
+    @extend %button;
+    background-color: $bg_color;
+    @if $version_text {
+        &:nth-child(2) {
+            color: $version_text;
+        }
+    }
+}
+
+.button--cyan_600 { @include button--mod(map.get(vars.$cyan, 600), map.get(vars.$cyan, 300)) }
+.button--cyan_300 { @include button--mod(map.get(vars.$cyan, 300), map.get(vars.$cyan, 300)) }
+.button--purple_600 { @include button--mod(map.get(vars.$purple, 600), map.get(vars.$purple, 300)) }
+.button--purple_600_no_version_text { @include button--mod(map.get(vars.$purple, 600)) }
+.button--purple_300 { @include button--mod(map.get(vars.$purple, 300), map.get(vars.$purple, 300)) }
