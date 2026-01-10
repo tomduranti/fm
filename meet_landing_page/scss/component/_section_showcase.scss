@@ -1,14 +1,15 @@
-@use "../abstract/vars";
+@use "../abstract/color" as c;
+@use "../abstract/mixins" as m;
 @use "sass:map";
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 9.219rem);
-    gap: map.get(vars.$spacing, 200);
-    margin-block-end: map.get(vars.$spacing, 800);
+    @include m.spacing(gap, 200);
+    @include m.spacing(margin-block-end, 800);
 
     &__item {
-        inline-size: 147.5px;
+        inline-size: 9.219rem;
     }
 
     &__img {
@@ -22,16 +23,16 @@
 .showcase {
 
     &__text {
-        margin-block-end: map.get(vars.$spacing, 800);
+        @include m.spacing(margin-block-end, 800);
     }
 
     &__intro {
         text-transform: uppercase;
-        color: map.get(vars.$cyan, 600);
-        margin-block-end: map.get(vars.$spacing, 200);
+        color: map.get(c.$cyan, 600);
+        @include m.spacing(margin-block-end, 200);
     }
 
     &__slogan {
-        margin-block-end: map.get(vars.$spacing, 400);
+        @include m.spacing(margin-block-end, 400);
     }
 }

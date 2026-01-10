@@ -1,72 +1,35 @@
-@use "./vars";
+@use "./color" as c;
+@use "./typography" as t;
+@use "./mixins" as m;
 @use "sass:map";
 
-.text_preset_1 {
-    font-family: vars.$font_family;
-    font-weight: map.get(vars.$fw, "black");
-    font-size: map.get(vars.$fs, 40);
-    line-height: 110%;
-    color: map.get(vars.$slate, 900);
-}
-
-%text_preset_2 {
-    font-family: vars.$font_family;
-    font-weight: map.get(vars.$fw, "black");
-    font-size: map.get(vars.$fs, 32);
-    line-height: 110%;
-}
+.text_preset_1 { @include m.text_preset(t.$font_family, 40, "black", 110%, 0, map.get(c.$slate, 900)); }
+%text_preset_2 { @include m.text_preset(t.$font_family, 32, "black", 110%); }
+.text_preset_3 { @include m.text_preset(t.$font_family, 16, "black", 110%, .25rem); }
+%text_preset_4 { @include m.text_preset(t.$font_family, 16, "medium", 140%); }
+.text_preset_5 { @include m.text_preset(t.$font_family, 16, "black", 150%); }
 
 .text_preset_2--dark_blue {
     @extend %text_preset_2;
-    color: map.get(vars.$slate, 900);
+    color: map.get(c.$slate, 900);
 }
 
 .text_preset_2--white {
     @extend %text_preset_2;
-    color: vars.$white;
-}
-
-.text_preset_3 {
-    font-family: vars.$font_family;
-    font-weight: map.get(vars.$fw, "black");
-    font-size: map.get(vars.$fs, 16);
-    line-height: 110%;
-    letter-spacing: .25rem;
-}
-
-%text_preset_4 {
-    font-family: vars.$font_family;
-    font-weight: map.get(vars.$fw, "medium");
-    font-size: map.get(vars.$fs, 16);
-    line-height: 140%;
+    color: c.$white;
 }
 
 .text_preset_4--slate {
     @extend %text_preset_4;
-    color: map.get(vars.$slate, 600);
+    color: map.get(c.$slate, 600);
 }
 
 .text_preset_4--white {
     @extend %text_preset_4;
     line-height: 150%;
-    color: vars.$white;
+    color: c.$white;
 }
 
-.text_preset_5 {
-    font-family: vars.$font_family;
-    font-weight: map.get(vars.$fw, "black");
-    font-size: map.get(vars.$fs, 16);
-    line-height: 150%;
-}
-
-.color_cyan_300 {
-    color: map.get(vars.$cyan, 300);
-}
-
-.color_purple_300 {
-    color: map.get(vars.$purple, 300);
-}
-
-.margin_left--2 {
-    margin-inline-start: 0.155rem;
-}
+.color_cyan--300 { color: map.get(c.$cyan, 300); }
+.color_purple--300 { color: map.get(c.$purple, 300); }
+.margin_left--2 { @include m.spacing(margin-inline-start, 25); }

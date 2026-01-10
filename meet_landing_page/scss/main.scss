@@ -1,4 +1,7 @@
-@use "abstract/vars";
+@use "abstract/color";
+@use "abstract/typography";
+@use "abstract/spacing";
+@use "abstract/mixins";
 @use "abstract/utils";
 @use "base/base";
 @use "component/header";

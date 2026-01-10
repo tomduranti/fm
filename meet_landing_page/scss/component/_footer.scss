@@ -1,5 +1,5 @@
-@use "../abstract/vars";
-@use "../abstract/utils";
+@use "../abstract/color" as c;
+@use "../abstract/mixins" as m;
 @use "sass:map";
 
 .footer {
@@ -7,7 +7,7 @@
     &__bg {
         min-height: 45.3vh;
         position: relative;
-        background-color: map.get(vars.$cyan, 600);
+        background-color: map.get(c.$cyan, 600);
         background-image: url("../../assets/mobile/footer.jpg");
         background-repeat: no-repeat;
         background-position: center;
@@ -17,24 +17,21 @@
             content: "";
             display: block;
             position: absolute;
-            background: map.get(vars.$cyan, 600);
+            background: map.get(c.$cyan, 600);
             opacity: .9;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 1
+            inset: 0;
+            z-index: 1;
         }
     }
 
     &__text {
         position: absolute;
         z-index: 2;
-        top: map.get(vars.$spacing, 800);
+        @include m.spacing(top, 800);
     }
 
     &__slogan,
     &__paragraph {
-        margin-block-end: map.get(vars.$spacing, 300);
+        @include m.spacing(margin-block-end, 300);
     }
 }

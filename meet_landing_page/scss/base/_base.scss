@@ -1,4 +1,5 @@
-@use "../abstract/vars";
+@use "../abstract/mixins" as m;
+@use "../abstract/spacing";
 @use "../abstract/utils";
 @use "sass:map";
 
@@ -11,7 +12,7 @@ body {
 .container {
   position: relative;
   inline-size: 100%;
-  max-inline-size: 19.438em;
+  max-inline-size: 19.438rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -19,15 +20,15 @@ body {
 .section_img {
   display: flex;
   justify-content: center;
-  margin-block-end: map.get(vars.$spacing, 600);
+  @include m.spacing(margin-block-end, 600);
 
   &--large-bottom {
-    margin-block-end: map.get(vars.$spacing, 800);
+    @include m.spacing(margin-block-end, 800);
   }
 
   &--neg_bottom {
     position: relative;
     z-index: 2;
-    margin-block-end: -28px;
+    @include m.spacing(margin-block-end, n315);
   }
 }

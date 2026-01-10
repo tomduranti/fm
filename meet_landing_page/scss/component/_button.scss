@@ -1,16 +1,24 @@
-@use "../abstract/vars";
+@use "../abstract/color" as c;
+@use "../abstract/mixins" as m;
 @use "sass:map";
 
 @mixin button--mod($bg_color, $bg_hover) {
     border-radius: 1.813rem;
-    color: vars.$white;
+    color: c.$white;
     background-color: $bg_color;
-    padding: map.get(vars.$spacing, 200) map.get(vars.$spacing, 500);
+    @include m.spacing(padding, 200, top, bottom);
+    @include m.spacing(padding, 500, right, left);
     -webkit-transition: background-color .3s ease, -webkit-transform .2s ease;
     transition: background-color .3s ease, -webkit-transform .2s ease;
     -o-transition: background-color .3s ease, transform .2s ease;
     transition: background-color .3s ease, transform .2s ease;
     transition: background-color .3s ease, transform .2s ease, -webkit-transform .2s ease;
+
+    @media (prefers-reduced-motion: reduce) {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
 
     &:hover {
         background-color: $bg_hover;
@@ -18,10 +26,14 @@
     
     &:active {
         -webkit-transform: scale(.99);
-            -ms-transform: scale(.99);
-                transform: scale(.99);
+        -ms-transform: scale(.99);
+        transform: scale(.99);
+    }
+
+    &:focus-visible {
+        outline: 2px solid map.get(c.$slate, 600);
     }
 }
 
-.button--cyan_600 { @include button--mod(map.get(vars.$cyan, 600), map.get(vars.$cyan, 400)); }
-.button--purple_600 { @include button--mod(map.get(vars.$purple, 600), map.get(vars.$purple, 400)); }
+.button--cyan_600 { @include button--mod(map.get(c.$cyan, 600), map.get(c.$cyan, 400)); }
+.button--purple_600 { @include button--mod(map.get(c.$purple, 600), map.get(c.$purple, 400)); }
