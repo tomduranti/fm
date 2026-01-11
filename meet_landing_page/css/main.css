@@ -128,6 +128,7 @@ body {
 .hero__cta_group {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-inline-size: 12.063rem;
   gap: 1rem;
 }
@@ -199,7 +200,7 @@ body {
 }
 
 .footer__bg {
-  min-height: 45.3vh;
+  min-height: 374px;
   position: relative;
   background-color: #4D96A9;
   background-image: url("../../assets/mobile/footer.jpg");
@@ -209,7 +210,7 @@ body {
 }
 @media screen and (min-width: 48rem) {
   .footer__bg {
-    min-height: 32vh;
+    min-height: 320px;
   }
 }
 .footer__bg::after {

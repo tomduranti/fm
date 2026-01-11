@@ -6,7 +6,7 @@
 .footer {
 
     &__bg {
-        min-height: 45.3vh;
+        min-height: 374px;
         position: relative;
         background-color: map.get(c.$cyan, 600);
         background-image: url("../../assets/mobile/footer.jpg");
@@ -14,7 +14,7 @@
         background-position: center;
         background-size: cover;
         @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
-            min-height: 32vh;
+            min-height: 320px;
         }
 
         &::after {
