@@ -20,18 +20,37 @@ body {
   }
 }
 
-.section_img {
+%section_img {
   display: flex;
   justify-content: center;
+}
+
+.section_img--hero_mobile_tablet {
+  @extend %section_img;
   @include m.spacing(margin-block-end, 600);
-
-  &--large_bottom {
-    @include m.spacing(margin-block-end, 800);
+  @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+      display: none;
   }
+}
 
-  &--neg_bottom {
-    position: relative;
-    z-index: 2;
-    @include m.spacing(margin-block-end, n315);
+.section_img--hero_l_desktop,
+.section_img--hero_r_desktop {
+  @extend %section_img;
+  @include m.spacing(margin-block-end, 600);
+  display: none;
+  @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+      display: inline-block;
   }
+}
+
+.section_img--large_bottom {
+  @extend %section_img;
+  @include m.spacing(margin-block-end, 800);
+}
+
+.section_img--neg_bottom {
+  @extend %section_img;
+  position: relative;
+  z-index: 2;
+  @include m.spacing(margin-block-end, n315);
 }

@@ -17,12 +17,14 @@
         </header>
         <main>
             <section class="hero">
-                <div class="section_img">
-                    <picture>
-                        <source srcset="assets/tablet/hero.jpg" media="(min-width: 23.5rem)">
-                        <img src="assets/mobile/hero.jpg" alt="chat group image">
-                    </picture>
-                </div>
+                <picture class="section_img--hero_mobile_tablet">
+                    <source srcset="assets/tablet/hero.jpg" media="(min-width: 23.5rem)">
+                    <img src="assets/mobile/hero.jpg" alt="chat group image">
+                </picture>
+                <picture class="section_img--hero_l_desktop">
+                    <source srcset="assets/desktop/hero_left.jpg" media="(min-width: 90rem)">
+                    <img src="assets/tablet/hero.jpg" alt="chat group image">
+                </picture>
                 <div class="container">
                     <div class="hero__text">
                         <h1 class="hero__heading text_preset_1">Group Chat <span class="text_breaker">for Everyone</span>
@@ -39,6 +41,10 @@
                         </div>
                     </div>
                 </div>
+                <picture class="section_img--hero_r_desktop">
+                    <source srcset="assets/desktop/hero_right.jpg" media="(min-width: 90rem)">
+                    <img src="assets/tablet/hero.jpg" alt="chat group image">
+                </picture>
             </section>
             <section class="showcase">
                 <div class="section_img section_img--large_bottom">
