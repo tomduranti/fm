@@ -74,7 +74,7 @@ body {
   font-smooth: always;
 }
 
-.container--text, .container--section, .container--hero {
+.container--text_2, .container--text, .container--section, .container--hero {
   position: relative;
   inline-size: 100%;
   min-height: inherit;
@@ -116,6 +116,20 @@ body {
 @media screen and (min-width: 90rem) {
   .container--text {
     max-inline-size: 34rem;
+  }
+}
+
+.container--text_2 {
+  max-inline-size: 19.438rem;
+}
+@media screen and (min-width: 48rem) {
+  .container--text_2 {
+    max-inline-size: 31.5rem;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .container--text_2 {
+    max-inline-size: 70rem;
   }
 }
 
@@ -304,8 +318,36 @@ body {
   z-index: 2;
   top: 4rem;
 }
-.footer__slogan, .footer__paragraph {
+@media screen and (min-width: 90rem) {
+  .footer__text {
+    display: flex;
+    gap: 2rem;
+    top: 7rem;
+  }
+}
+.footer__slogan {
   margin-block-end: 1.5rem;
+}
+@media screen and (min-width: 90rem) {
+  .footer__slogan {
+    text-align: start;
+    max-inline-size: 27.813rem;
+  }
+}
+.footer__paragraph {
+  margin-block-end: 1.5rem;
+}
+@media screen and (min-width: 90rem) {
+  .footer__paragraph {
+    text-align: start;
+    max-inline-size: 22.188rem;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .footer__cta_group {
+    margin-inline-start: 3.938rem;
+    max-inline-size: 16rem;
+  }
 }
 
 .button--cyan_600 {
@@ -356,4 +398,9 @@ body {
 }
 .button--purple_600:focus-visible {
   outline: 2px solid #87879D;
+}
+@media screen and (min-width: 90rem) {
+  .button--purple_600 {
+    align-self: flex-start;
+  }
 }

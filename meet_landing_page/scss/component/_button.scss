@@ -1,5 +1,6 @@
 @use "../abstract/color" as c;
 @use "../abstract/mixins" as m;
+@use "../abstract/vars" as v;
 @use "sass:map";
 
 @mixin button--mod($bg_color, $bg_hover) {
@@ -36,4 +37,9 @@
 }
 
 .button--cyan_600 { @include button--mod(map.get(c.$cyan, 600), map.get(c.$cyan, 400)); }
-.button--purple_600 { @include button--mod(map.get(c.$purple, 600), map.get(c.$purple, 400)); }
+.button--purple_600 { 
+    @include button--mod(map.get(c.$purple, 600), map.get(c.$purple, 400));
+    @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+        align-self: flex-start;
+    } 
+}

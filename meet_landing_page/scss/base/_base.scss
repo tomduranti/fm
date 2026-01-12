@@ -41,9 +41,19 @@ body {
   @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
     max-inline-size: map.get(v.$container, tablet_1);
   }
-
   @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
     max-inline-size: map.get(v.$container, l_desktop_2);
+  }
+}
+
+.container--text_2 {
+  @extend %container;
+  max-inline-size: map.get(v.$container, mobile_2);
+  @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
+    max-inline-size: map.get(v.$container, tablet_1);
+  }
+  @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+    max-inline-size: map.get(v.$container, l_desktop_3);
   }
 }
 
