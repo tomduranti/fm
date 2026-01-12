@@ -1,0 +1,17 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/vars" as v;
+@use "sass:map";
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    @include m.spacing(margin-block-end, 800);
+}
+
+.logo {
+    @include m.spacing(margin-block-start, 600);
+    @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+        @include m.spacing(margin-block-start, 1000);
+    }
+}

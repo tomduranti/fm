@@ -1,0 +1,19 @@
+
+$breakpoint: (
+    mobile: 0,
+    tablet: 48rem,      // 768px
+    s_desktop: 64rem,   // 1024px
+    l_desktop: 90rem,   // 1440px
+    xl_desktop: 160rem  // 2560px
+);
+
+$container: (
+    mobile_1: 19.063rem,
+    mobile_2: 19.438rem,
+    tablet_1: 31.5rem,
+    tablet_2: 42.5rem,
+    l_desktop_1: 28.019rem,
+    l_desktop_2: 34rem,
+    l_desktop_3: 70rem,
+    xl_desktop: 69.375rem
+);

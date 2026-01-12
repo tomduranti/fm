@@ -1,0 +1,46 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/vars" as v;
+@use "sass:map";
+
+.hero {
+    @include m.spacing(margin-block-end, 800);
+    @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+      display: flex;
+      @include m.spacing(gap, 1495);
+    }
+
+    .text_breaker {
+        display: block;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include m.spacing(gap, 300);
+    }
+
+    &__cta_group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-inline-size: 12.063rem;
+        @include m.spacing(gap, 200);
+    }
+}
+
+@media screen and (min-width: map.get(v.$breakpoint, tablet)) {
+    .hero {
+        @include m.spacing(margin-block-end, 1450);
+
+        &__text {
+            margin: 0 auto;
+            max-inline-size: 28.019rem;
+        }
+
+        &__cta_group {
+            flex-direction: row;
+            max-inline-size: inherit;
+        }
+    }
+  }

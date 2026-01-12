@@ -1,0 +1,93 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/vars" as v;
+@use "sass:map";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+}
+
+%container {
+  position: relative;
+  inline-size: 100%;
+  min-height: inherit;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container--hero {
+  @extend %container;
+  max-inline-size: map.get(v.$container, mobile_1);
+  @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
+      max-inline-size: map.get(v.$container, l_desktop_1);
+  }
+}
+
+.container--section {
+  @extend %container;
+  max-inline-size: map.get(v.$container, mobile_2);
+  @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
+      max-inline-size: map.get(v.$container, tablet_2);
+  }
+  @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+      max-inline-size: map.get(v.$container, l_desktop_3);
+  }
+}
+
+.container--text {
+  @extend %container;
+  max-inline-size: map.get(v.$container, mobile_2);
+  @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
+    max-inline-size: map.get(v.$container, tablet_1);
+  }
+  @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+    max-inline-size: map.get(v.$container, l_desktop_2);
+  }
+}
+
+.container--text_2 {
+  @extend %container;
+  max-inline-size: map.get(v.$container, mobile_2);
+  @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
+    max-inline-size: map.get(v.$container, tablet_1);
+  }
+  @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+    max-inline-size: map.get(v.$container, l_desktop_3);
+  }
+}
+
+%section_img {
+  display: flex;
+  justify-content: center;
+}
+
+.section_img--hero_mobile_tablet {
+  @extend %section_img;
+  @include m.spacing(margin-block-end, 600);
+  @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+      display: none;
+  }
+}
+
+.section_img--hero_l_desktop,
+.section_img--hero_r_desktop {
+  @extend %section_img;
+  @include m.spacing(margin-block-end, 600);
+  display: none;
+  @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+      display: inline-block;
+  }
+}
+
+.section_img--large_bottom {
+  @extend %section_img;
+  @include m.spacing(margin-block-end, 800);
+}
+
+.section_img--neg_bottom {
+  @extend %section_img;
+  position: relative;
+  z-index: 2;
+  @include m.spacing(margin-block-end, n315);
+}

@@ -1,0 +1,35 @@
+@use "./color" as c;
+@use "./typography" as t;
+@use "./mixins" as m;
+@use "sass:map";
+
+.text_preset_1 { @include m.text_preset(t.$font_family, clamp(2.5rem, 1.98rem + 2.24vw, 4rem), "black", 110%, 0, map.get(c.$slate, 900)); }
+%text_preset_2 { @include m.text_preset(t.$font_family, clamp(2rem, 1.83rem + 0.75vw, 2.5rem), "black", 110%); }
+.text_preset_3 { @include m.text_preset(t.$font_family, clamp(0.75rem, 0.66rem + 0.37vw, 1rem), "black", 110%, .25rem); }
+%text_preset_4 { @include m.text_preset(t.$font_family, clamp(1rem, 0.96rem + 0.19vw, 1.13rem), "medium", 140%); }
+.text_preset_5 { @include m.text_preset(t.$font_family, 16, "black", 150%); }
+
+.text_preset_2--dark_blue {
+    @extend %text_preset_2;
+    color: map.get(c.$slate, 900);
+}
+
+.text_preset_2--white {
+    @extend %text_preset_2;
+    color: c.$white;
+}
+
+.text_preset_4--slate {
+    @extend %text_preset_4;
+    color: map.get(c.$slate, 600);
+}
+
+.text_preset_4--white {
+    @extend %text_preset_4;
+    line-height: 150%;
+    color: c.$white;
+}
+
+.color_cyan--300 { color: map.get(c.$cyan, 300); }
+.color_purple--300 { color: map.get(c.$purple, 300); }
+.margin_left--2 { @include m.spacing(margin-inline-start, 25); }

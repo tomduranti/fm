@@ -1,0 +1,75 @@
+@use "../abstract/color" as c;
+@use "../abstract/mixins" as m;
+@use "../abstract/vars" as v;
+@use "sass:map";
+
+.footer {
+
+    &__bg {
+        min-height: 374px;
+        position: relative;
+        background-color: map.get(c.$cyan, 600);
+        background-image: url("../../assets/mobile/footer.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
+            background-image: url("../../assets/tablet/footer.jpg");
+            min-height: 320px;
+        }
+
+        @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+            background-image: url("../../assets/desktop/footer.jpg");
+            min-height: 312px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background: map.get(c.$cyan, 600);
+            opacity: .9;
+            inset: 0;
+            z-index: 1;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        z-index: 2;
+        @include m.spacing(top, 800);
+
+        @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+            display: flex;
+
+            @include m.spacing(gap, 400);
+            @include m.spacing(top, 1400);
+        }
+    }
+
+    &__slogan {
+        @include m.spacing(margin-block-end, 300);
+
+        @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+            text-align: start;
+            max-inline-size: 27.813rem;
+        }
+    }
+
+    &__paragraph {
+        @include m.spacing(margin-block-end, 300);
+
+        @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+            text-align: start;
+            max-inline-size: 22.188rem;
+        }
+    }
+
+    &__cta_group {
+        @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+            margin-inline-start: 3.938rem;
+            max-inline-size: 16rem;
+        }
+    }
+}
