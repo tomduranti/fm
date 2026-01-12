@@ -15,6 +15,11 @@
     @include m.spacing(margin-block-end, 800);
     @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
         grid-template-columns: repeat(auto-fit, 9.5rem);
+        @include m.spacing(gap, 300);
+    }
+
+    @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+        grid-template-columns: repeat(auto-fit, 16rem);
         @include m.spacing(gap, 400);
     }
 
@@ -47,13 +52,6 @@
 }
 
 .showcase {
-
-    &__text {
-        @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
-            margin:0 auto;
-            max-inline-size: 31.5rem;
-        }
-    }
 
     &__intro {
         text-transform: uppercase;
