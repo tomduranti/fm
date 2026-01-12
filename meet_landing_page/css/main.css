@@ -157,30 +157,28 @@ body {
   gap: 1rem;
   margin-block-end: 4rem;
 }
+@media screen and (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, 9.5rem);
+    gap: 2rem;
+  }
+}
 .grid__item {
-  inline-size: 9.219rem;
-  -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
-  -o-transition: transform 0.2s ease;
   transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .grid__item {
-    -webkit-transition: none;
-    -o-transition: none;
     transition: none;
   }
 }
 .grid__item:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 .grid__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0.625rem;
 }
 
@@ -246,16 +244,10 @@ body {
   padding-bottom: 1rem;
   padding-right: 2.5rem;
   padding-left: 2.5rem;
-  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
-  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
-  -o-transition: background-color 0.3s ease, transform 0.2s ease;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .button--cyan_600 {
-    -webkit-transition: none;
-    -o-transition: none;
     transition: none;
   }
 }
@@ -263,8 +255,6 @@ body {
   background-color: #71C0D4;
 }
 .button--cyan_600:active {
-  -webkit-transform: scale(0.99);
-  -ms-transform: scale(0.99);
   transform: scale(0.99);
 }
 .button--cyan_600:focus-visible {
@@ -279,16 +269,10 @@ body {
   padding-bottom: 1rem;
   padding-right: 2.5rem;
   padding-left: 2.5rem;
-  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
-  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
-  -o-transition: background-color 0.3s ease, transform 0.2s ease;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .button--purple_600 {
-    -webkit-transition: none;
-    -o-transition: none;
     transition: none;
   }
 }
@@ -296,8 +280,6 @@ body {
   background-color: #B18BDD;
 }
 .button--purple_600:active {
-  -webkit-transform: scale(0.99);
-  -ms-transform: scale(0.99);
   transform: scale(0.99);
 }
 .button--purple_600:focus-visible {

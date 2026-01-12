@@ -13,9 +13,12 @@
     grid-template-columns: repeat(auto-fit, 9.219rem);
     @include m.spacing(gap, 200);
     @include m.spacing(margin-block-end, 800);
+    @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
+        grid-template-columns: repeat(auto-fit, 9.5rem);
+        @include m.spacing(gap, 400);
+    }
 
     &__item {
-        inline-size: 9.219rem;
         -webkit-transition: -webkit-transform .2s ease;
         transition: -webkit-transform .2s ease;
         -o-transition: transform .2s ease;
