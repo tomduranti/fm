@@ -34,7 +34,7 @@
 
 @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
     .hero {
-        @include m.spacing(margin-block-end, 1450);
+        @include m.spacing(margin-block-end, 1550);
 
         &__text {
             margin: 0 auto;
