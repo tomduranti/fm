@@ -7,6 +7,9 @@
     justify-content: center;
     align-content: center;
     @include m.spacing(margin-block-end, 800);
+    @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+        @include m.spacing(margin-block-end, 1050);
+    }
 }
 
 .logo {

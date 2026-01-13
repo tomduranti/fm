@@ -6,22 +6,22 @@
 .footer {
 
     &__bg {
-        min-height: 374px;
+        min-height: 45.224vh;
         position: relative;
         background-color: map.get(c.$cyan, 600);
-        background-image: url("../../assets/mobile/footer.jpg");
+        background-image: url("../assets/mobile/footer.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
 
         @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
-            background-image: url("../../assets/tablet/footer.jpg");
-            min-height: 320px;
+            background-image: url("../assets/tablet/footer.jpg");
+            min-height: 38.8vh;
         }
 
         @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
-            background-image: url("../../assets/desktop/footer.jpg");
-            min-height: 312px;
+            background-image: url("../assets/desktop/footer.jpg");
+            min-height: 31.2vh;
         }
 
         &::after {

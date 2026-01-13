@@ -18,6 +18,9 @@
         flex-direction: column;
         align-items: center;
         @include m.spacing(gap, 300);
+        @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
+            @include m.spacing(gap, 400);
+        }
     }
 
     &__cta_group {
