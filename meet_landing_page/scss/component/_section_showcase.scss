@@ -17,6 +17,7 @@
 
     @media screen and (min-width: map.get(v.$breakpoint, l_desktop)) {
         grid-template-columns: repeat(auto-fit, 16rem);
+        height: 256px;
         @include m.spacing(gap, 400);
     }
 
