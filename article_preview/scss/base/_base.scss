@@ -1,0 +1,8 @@
+@use "../abstract/spacing" as s;
+@use "sass:map";
+
+.container {
+    inline-size: 100%;
+    max-inline-size: 16.688rem;
+    padding: map.get(s.$spacing, 400) map.get(s.$spacing, 380) map.get(s.$spacing, 225);
+}

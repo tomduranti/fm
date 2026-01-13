@@ -1,0 +1,20 @@
+@use "../abstract/mixins" as m;
+
+.card {
+    max-inline-size: 20.438rem;
+    border-radius: .625rem;
+    overflow: hidden;
+
+    &__img {
+        inline-size: 100%;
+        object-fit: cover;
+    }
+
+    &__main {
+        @include m.spacing(margin-block-end, 300);
+    }
+
+    &__heading {
+        @include m.spacing(margin-block-end, 600);
+    }
+}
