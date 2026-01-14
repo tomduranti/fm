@@ -9,13 +9,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/reset_min.css">
         <link rel="stylesheet" href="/css/main_min.css">
-        <!-- <script src="main.js"></script> -->
+        <script src="main.js"></script>
         <title>Article preview component</title>
+        <link rel="shortcut icon" href="images/favicon_sdm.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     </head>
 
     <body>
-        <main>
+        <main class="page_wrapper">
             <article class="card">
                 <img class="card__img" src="/assets/drawers.jpg" alt="drawer image">
                 <div class="card__text">
@@ -31,13 +32,17 @@
                                 to help you make any room feel complete.</h3>
                         </div>
                         <div class="profile">
-                            <img class="profile__avatar_img" src="/assets/avatar_michelle.jpg" alt="avatar image">
-                            <div class="profile__name_and_date">
-                                <span class="profile__name">Michelle Appleton</span>
-                                <span class="profile__date">28 Jun 2020</span>
+                            <div class="profile__personal_detail">
+                                <div class="profile__avatar_img">
+                                    <img src="/assets/avatar_michelle.jpg" alt="avatar image">
+                                </div>
+                                <div class="profile__name_and_date">
+                                    <span class="profile__name text_preset_2--bold">Michelle Appleton</span>
+                                    <span class="profile__date text_preset_2--medium_400">28 Jun 2020</span>
+                                </div>
                             </div>
+                            <img id="icon_share" src="/assets/icon_share_light.svg" alt="profile share image">
                         </div>
-                        <img id="icon_share" src="/assets/icon_share_light.svg" alt="profile share image">
                     </div>
                 </div>
             </article>

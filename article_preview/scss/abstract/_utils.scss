@@ -3,9 +3,9 @@
 @use "./mixins" as m;
 @use "sass:map";
 
-.text_preset_1 { @include m.text_preset(t.$font_family, 20, "bold", 1.3, 0.016rem, map.get(c.$grey, 900)); }
-%text_preset_2 { @include m.text_preset(t.$font_family, 13, "regular", 1.4, .12%); }
-.text_preset_3 { @include m.text_preset(t.$font_family, 13, "regular",  1.4, .25rem); }
+.text_preset_1 { @include m.text_preset(t.$font_family, map.get(t.$fs, 20), map.get(t.$fw, "bold"), 1.3, 0.016rem, map.get(c.$grey, 900)); }
+%text_preset_2 { @include m.text_preset(t.$font_family, map.get(t.$fs, 13), map.get(t.$fw, "regular"), 1.4, .001rem); }
+.text_preset_3 { @include m.text_preset(t.$font_family, map.get(t.$fs, 13), map.get(t.$fw, "regular"),  1.4, .25rem); }
 
 %text_preset_2--medium {
     @extend %text_preset_2;

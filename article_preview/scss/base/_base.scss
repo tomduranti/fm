@@ -1,8 +1,17 @@
+@use "../abstract/color" as c;
 @use "../abstract/spacing" as s;
 @use "sass:map";
+
+.page_wrapper {
+    background-color: map.get(c.$grey, 300);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .container {
     inline-size: 100%;
     max-inline-size: 16.688rem;
-    padding: map.get(s.$spacing, 400) map.get(s.$spacing, 380) map.get(s.$spacing, 225);
+    margin: map.get(s.$spacing, 400) map.get(s.$spacing, 380) map.get(s.$spacing, 225);
 }
