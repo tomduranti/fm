@@ -29,3 +29,19 @@
     font-weight: map.get(t.$fw, "bold");
     color: map.get(c.$grey, 900);
 }
+
+.fill--white {
+    fill: c.$white;
+}
+
+.fill--grey_500 {
+    fill: map.get(c.$grey, 500);
+}
+
+#display--none {
+    display: none;
+}
+
+.display--flex {
+    display: flex;
+}
