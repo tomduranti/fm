@@ -2,8 +2,10 @@
 
 .profile {
     display: flex;
-    // display: none;
+    align-items: center;
+    justify-content: space-between;
     @include m.spacing(gap, 800);
+    @include m.spacing(margin-block-start, 600);
 
     &__personal_detail {
         display: flex;
@@ -45,6 +47,6 @@
     }
 }
 
-.profile--hidden {
-    display:none;
+.profile--is_hidden {
+    display: none;
 }

@@ -1,14 +1,12 @@
-import { changeFillColor } from "/scss/component/profile.js";
-
 document.addEventListener("DOMContentLoaded", () => {
-    const iconShare = document.getElementById("icon_share");
-    const iconShareCircle = document.getElementById("icon_share__circle");
-    const iconShareArrow = document.getElementById("icon_share__path");
-    const personalDetail = document.getElementById("personal_detail");
+    const profile = document.getElementById("profile");
+    const toast = document.getElementById("toast");
 
-    iconShare.addEventListener("click", () => {
-        iconShareArrow.classList.toggle("fill--white");
-        iconShareCircle.classList.toggle("fill--grey_500");
-        personalDetail.classList.toggle("profile--hidden");
+    let iconShareButtons = document.querySelectorAll(".icon_share");
+    iconShareButtons.forEach(iconShareButton => {
+        iconShareButton.addEventListener("click", () => {
+            profile.classList.toggle("profile--is_hidden");
+            toast.classList.toggle("toast--is_visible");
+        })
     })
 })

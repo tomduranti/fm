@@ -1,0 +1,44 @@
+@use "../abstract/color" as c;
+@use "../abstract/spacing" as s;
+@use "../abstract/mixins" as m;
+@use "sass:map";
+
+.toast {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    background-color: map.get(c.$grey, 900);
+    padding: map.get(s.$spacing, 250) map.get(s.$spacing, 380);
+
+    &__social_group {
+        display: flex;
+        @include m.spacing(gap, 300);
+    }
+
+    &__text_social {
+        text-transform: uppercase;
+        color: map.get(c.$grey, 400);
+    }
+
+    &__cta_social {
+        display: flex;
+        align-items: center;
+        @include m.spacing(gap, 200);
+    }
+
+    &__social_btn {
+        path {
+            transition: fill .3s ease;
+        }
+
+        &:hover {
+            path {
+                fill: map.get(c.$grey, 400);
+            }
+        }
+    }
+}
+
+.toast--is_visible {
+    display: flex;
+}
