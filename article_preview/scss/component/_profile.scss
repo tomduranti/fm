@@ -6,6 +6,9 @@
     justify-content: space-between;
     @include m.spacing(gap, 800);
     @include m.spacing(margin-block-start, 600);
+    @media screen and (min-width: 48rem) {
+        @include m.spacing(margin-block-start, 0);
+    }
 
     &__personal_detail {
         display: flex;
@@ -38,6 +41,12 @@
         &:hover::after {
             opacity: 1;
             transform: rotate(-45deg) translateY(100%);
+        }
+    }
+
+    .icon_share {
+        @media screen and (min-width: 48rem) {
+            margin: .25rem .313rem .25rem 0;
         }
     }
 

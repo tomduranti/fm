@@ -2,6 +2,11 @@
 @use "../abstract/spacing" as s;
 @use "sass:map";
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .page_wrapper {
     background-color: map.get(c.$grey, 300);
     height: 100vh;
@@ -14,8 +19,8 @@
     inline-size: 100%;
     max-inline-size: 16.688rem;
     margin: map.get(s.$spacing, 400) map.get(s.$spacing, 380) map.get(s.$spacing, 225);
-}
-
-.icon_share {
-    cursor: pointer;
+    @media screen and (min-width: 48rem) {
+        max-inline-size: 19.438rem;
+        margin: map.get(s.$spacing, 505) map.get(s.$spacing, 425) map.get(s.$spacing, 505) map.get(s.$spacing, 400);
+    }
 }
