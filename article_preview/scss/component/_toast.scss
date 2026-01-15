@@ -16,8 +16,10 @@
     }
 
     &__text_social {
+        position: relative;
         text-transform: uppercase;
         color: map.get(c.$grey, 400);
+        cursor: pointer;
     }
 
     &__cta_social {
