@@ -1,5 +1,6 @@
 @use "../abstract/color" as c;
 @use "../abstract/spacing" as s;
+@use "../abstract/mixins" as m;
 @use "sass:map";
 
 body {
@@ -18,9 +19,24 @@ body {
 .container {
     inline-size: 100%;
     max-inline-size: 16.688rem;
-    margin: map.get(s.$spacing, 400) map.get(s.$spacing, 380) map.get(s.$spacing, 225);
+    margin: map.get(s.$spacing, 400) map.get(s.$spacing, 380) map.get(s.$spacing, 405);
     @media screen and (min-width: 48rem) {
         max-inline-size: 19.438rem;
         margin: map.get(s.$spacing, 505) map.get(s.$spacing, 425) map.get(s.$spacing, 505) map.get(s.$spacing, 400);
     }
+}
+
+.container_positioning {
+    display: flex;
+    @include m.spacing(gap, 800);
+    justify-content: center;
+    align-items: center;
+    @include m.spacing(padding-block-start, 175);
+    @include m.spacing(padding-block-end, 225);
+
+    position: relative;
+}
+
+.container_positioning--dark {
+    background-color: map.get(c.$grey, 900);
 }

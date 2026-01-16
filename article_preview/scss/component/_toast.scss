@@ -4,16 +4,13 @@
 @use "sass:map";
 
 .toast {
-    display: none;
+    z-index: -1;
+    position: absolute;
+    @include m.spacing(left, 380);
+    
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: map.get(c.$grey, 900);
-    padding: map.get(s.$spacing, 250) map.get(s.$spacing, 380);
-
-    &__social_group {
-        display: flex;
-        @include m.spacing(gap, 300);
-    }
+    @include m.spacing(gap, 300);
 
     &__text_social {
         position: relative;
@@ -46,5 +43,5 @@
 }
 
 .toast--is_visible {
-    display: flex;
+    z-index: 1;
 }

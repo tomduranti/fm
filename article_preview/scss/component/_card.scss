@@ -28,7 +28,6 @@
     }
 
     &__main {
-        @include m.spacing(margin-block-end, 380);
         @media screen and (min-width: 48rem) {
             @include m.spacing(margin-block-end, 300);
         }
