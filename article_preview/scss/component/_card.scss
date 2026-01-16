@@ -27,12 +27,6 @@
         }
     }
 
-    &__main {
-        @media screen and (min-width: 48rem) {
-            @include m.spacing(margin-block-end, 300);
-        }
-    }
-
     &__heading {
         @include m.spacing(margin-block-end, 300);
     }

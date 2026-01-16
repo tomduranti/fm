@@ -49,6 +49,11 @@
 
 #icon_share {
     cursor: pointer;
+    @media screen and (min-width: 48rem) {
+        @include m.spacing(margin-block-start, 50);
+        @include m.spacing(margin-block-end, 51);
+        @include m.spacing(margin-inline-end, 50);
+    }
 }
 
 .toast--is_visible {

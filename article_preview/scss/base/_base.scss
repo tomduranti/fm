@@ -22,7 +22,7 @@ body {
     margin: map.get(s.$spacing, 400) map.get(s.$spacing, 380) map.get(s.$spacing, 405);
     @media screen and (min-width: 48rem) {
         max-inline-size: 19.438rem;
-        margin: map.get(s.$spacing, 505) map.get(s.$spacing, 425) map.get(s.$spacing, 505) map.get(s.$spacing, 400);
+        margin: map.get(s.$spacing, 505) map.get(s.$spacing, 425) map.get(s.$spacing, 300) map.get(s.$spacing, 400);
     }
 }
 
@@ -35,6 +35,11 @@ body {
     @include m.spacing(padding-block-end, 225);
 
     position: relative;
+    @media screen and (min-width: 48rem) {
+        @include m.spacing(gap, 1300);
+        @include m.spacing(padding-block-start, 0);
+        @include m.spacing(padding-block-end, 505);
+    }
 }
 
 .container_positioning--dark {

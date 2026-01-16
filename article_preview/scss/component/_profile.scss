@@ -4,6 +4,7 @@
 
     &__personal_detail {
         display: flex;
+        @include m.spacing(gap, 200);
     }
 
     &__avatar_img {
@@ -13,7 +14,6 @@
         position: relative;
         overflow: hidden;
         transition: transform .3s ease;
-        @include m.spacing(margin-inline-end, 200);
 
         &::after {
             content: '';
