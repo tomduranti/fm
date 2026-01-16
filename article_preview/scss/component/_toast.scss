@@ -13,7 +13,6 @@
     @include m.spacing(gap, 300);
 
     &__text_social {
-        position: relative;
         text-transform: uppercase;
         color: map.get(c.$grey, 400);
         cursor: pointer;
@@ -30,15 +29,25 @@
             transition: fill .3s ease;
         }
 
-        &:hover {
-            path {
-                fill: map.get(c.$grey, 400);
+        @media (pointer: coarse) {
+            &:active {
+                path {
+                    fill: map.get(c.$grey, 400);
+                }
+            }
+        }
+
+        @media (pointer: fine) {
+            &:hover {
+                path {
+                    fill: map.get(c.$grey, 400);
+                }
             }
         }
     }
 }
 
-.icon_share {
+#icon_share {
     cursor: pointer;
 }
 
