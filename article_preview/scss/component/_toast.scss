@@ -12,6 +12,17 @@
     align-items: center;
     @include m.spacing(gap, 300);
 
+    @media screen and (min-width: 48rem) {
+        background-color: map.get(c.$grey, 900);
+        padding: 16px 39px 15px 39px;
+        border-radius: 10px;
+        width: 100%;
+        max-inline-size: 15.5rem;
+        left: 52%;
+        bottom: 133%;
+        align-items: center;
+    }
+
     &__text_social {
         text-transform: uppercase;
         color: map.get(c.$grey, 400);

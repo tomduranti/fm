@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     iconShareButton.addEventListener("click", () => {
         iconShareButtonCircle.classList.toggle("fill--grey_500");
         iconShareButtonPath.classList.toggle("fill--white");
-        containerPositioning.classList.toggle("container_positioning--dark");
-        profile.classList.toggle("profile--is_hidden");
+        // containerPositioning.classList.toggle("container_positioning--dark");
+        // profile.classList.toggle("profile--is_hidden");
         toast.classList.toggle("toast--is_visible");
     })
 })

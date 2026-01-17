@@ -36,6 +36,7 @@ body {
 
     position: relative;
     @media screen and (min-width: 48rem) {
+        position: relative;
         @include m.spacing(gap, 1300);
         @include m.spacing(padding-block-start, 0);
         @include m.spacing(padding-block-end, 505);
