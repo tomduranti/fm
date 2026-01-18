@@ -18,9 +18,13 @@
         border-radius: 10px;
         width: 100%;
         max-inline-size: 15.5rem;
-        left: 52%;
-        bottom: 133%;
+        left: 61.5%;
+        bottom: 141%;
         align-items: center;
+    }
+
+    @media screen and (min-width: 90rem) {
+        
     }
 
     &__text_social {
