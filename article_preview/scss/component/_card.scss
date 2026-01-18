@@ -15,6 +15,8 @@
     @media screen and (min-width: 48rem) {
         max-inline-size: 38rem;
         flex-direction: row;
+        /*necessary to let toast overflow card at tablet/desktop size*/
+        overflow: visible;
     }
 
     &__img {
@@ -24,6 +26,9 @@
         @media screen and (min-width: 48rem) {
             max-inline-size: 14.313rem;
             height: auto;
+            /*necessary to round img borders because overflow: visible at tablet/desktop size*/
+            @include m.spacing(border-start-start-radius, 110);
+            @include m.spacing(border-end-start-radius, 110);
         }
     }
 

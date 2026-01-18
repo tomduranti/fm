@@ -14,7 +14,7 @@
 
     @media screen and (min-width: 48rem) {
         background-color: map.get(c.$grey, 900);
-        padding: 16px 39px 15px 39px;
+        padding: 18px 31px 17px 32px;
         border-radius: 10px;
         width: 100%;
         max-inline-size: 15.5rem;
@@ -36,6 +36,8 @@
     }
 
     &__social_btn {
+        line-height: 0;
+
         path {
             transition: fill .3s ease;
         }
@@ -54,6 +56,24 @@
                     fill: map.get(c.$grey, 400);
                 }
             }
+        }
+    }
+
+    &__triangle {
+        opacity: 0;
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid map.get(c.$grey, 900);
+        border-right: 12px solid transparent;
+        border-left: 12px solid transparent;
+
+        @media screen and (min-width: 48rem) {
+            opacity: 1;
         }
     }
 }
