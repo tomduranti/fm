@@ -85,6 +85,11 @@
         @include m.spacing(margin-block-end, 51);
         @include m.spacing(margin-inline-end, 50);
     }
+
+    @media screen and (min-width: 90rem) {
+        @include m.spacing(margin-inline-end, 26);
+        @include m.spacing(margin-block-end, 50);
+    }
 }
 
 .toast--is_visible {

@@ -19,6 +19,10 @@
         overflow: visible;
     }
 
+    @media screen and (min-width: 90rem) {
+        max-inline-size: 45.625rem;
+    }
+
     &__img {
         inline-size: 100%;
         height: 12.5rem;
@@ -29,6 +33,11 @@
             /*necessary to round img borders because overflow: visible at tablet/desktop size*/
             @include m.spacing(border-start-start-radius, 110);
             @include m.spacing(border-end-start-radius, 110);
+        }
+
+        @media screen and (min-width: 90rem) {
+            inline-size: 100%;
+            max-inline-size: 17.813rem;
         }
     }
 
