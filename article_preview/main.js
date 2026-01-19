@@ -1,5 +1,3 @@
-const tabletSize = window.matchMedia("(max-width: 47.938em)");
-
 document.addEventListener("DOMContentLoaded", () => {
     const profile = document.getElementById("profile");
     const toast = document.getElementById("toast");
@@ -8,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const iconShareButton = document.getElementById("icon_share");
     const iconShareButtonCircle = document.getElementById("icon_share__circle");
     const iconShareButtonPath = document.getElementById("icon_share__path");
+
+    const tabletSize = window.matchMedia("(max-width: 47.938em)");
 
     iconShareButton.addEventListener("click", () => {
         iconShareButtonCircle.classList.toggle("fill--grey_500");

@@ -10,7 +10,7 @@ body {
 
 .page_wrapper {
     background-color: map.get(c.$grey, 300);
-    height: 100vh;
+    block-size: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,8 +53,4 @@ body {
         padding-block-end: 1.875rem;
         gap: 10rem;
     }
-}
-
-.container_positioning--dark {
-    background-color: map.get(c.$grey, 900);
 }

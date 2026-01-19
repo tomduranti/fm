@@ -37,3 +37,15 @@
 .fill--grey_500 {
     fill: map.get(c.$grey, 500);
 }
+
+.toast--is_visible {
+    z-index: 1;
+}
+
+.profile--is_hidden {
+    opacity: 0;
+}
+
+.container_positioning--dark {
+    background-color: map.get(c.$grey, 900);
+}
