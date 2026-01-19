@@ -24,15 +24,9 @@
 }
 
 @mixin transition($prop...) {
-    -webkit-transition: $prop;  
-	-moz-transition:    $prop;
-	-ms-transition:     $prop; 
-	-o-transition:      $prop;  
-
     @media (prefers-reduced-motion: no-preference) {
         transition: $prop;
     }
-
     @media (prefers-reduced-motion: reduce) {
         transition: none;
     }

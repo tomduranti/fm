@@ -15,13 +15,13 @@
         border-radius: 50%;
         position: relative;
         overflow: hidden;
-        @include m.transition(all, .3s, ease);
+        @include m.transition(transform .3s ease);
 
         &::after {
             content: '';
             position: absolute;
             inset: 0;
-            opacity: 0;
+
             inline-size: 2.5em;
             block-size: 2.5em;
             background: linear-gradient(0deg,
@@ -29,23 +29,30 @@
                     transparent 30%,
                     map.get(c.$grey, 700));
             transform: rotate(-45deg);
-            @include m.transition(all, .5s, ease);
-
-            &:hover::after {
-                opacity: 1;
-                transform: rotate(-45deg) translateY(100%);
-            }
+            @include m.transition(all .5s ease);
+            opacity: 0;
         }
-    }
 
-    .icon_share {
-        @media screen and (min-width: 48rem) {
-            margin: .25rem .313rem .25rem 0;
+        &:hover::after {
+            opacity: 1;
+            transform: rotate(-45deg) translateY(100%);
         }
     }
 
     &__name_and_date {
         display: flex;
         flex-direction: column;
+    }
+}
+
+#icon_share {
+    @include m.transition(transform .2s ease);
+
+    @media screen and (min-width: 48rem) {
+        margin: .25rem .313rem .25rem 0;
+    }
+
+    &:focus-visible {
+        transform: scale(1.1);
     }
 }

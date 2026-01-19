@@ -25,8 +25,14 @@
     }
 
     @media screen and (min-width: 90rem) {
-        inset-inline-start: 60.5%;
+        inset-inline-start: 62%;
         inset-block-end: 140%;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        @include m.spacing(gap, 200);
     }
 
     &__text_social {
@@ -36,31 +42,25 @@
     }
 
     &__cta_social {
-        display: flex;
-        align-items: center;
-        @include m.spacing(gap, 200);
-    }
+        cursor: pointer;
 
-    &__social_btn {
-        line-height: 0;
+        svg {
+            overflow: visible;
+        }
 
         path {
-            @include m.transition(fill, .3s, ease);
+            @include m.transition(all .3s ease);
         }
 
         @media (pointer: coarse) {
-            &:active {
-                path {
-                    fill: map.get(c.$grey, 400);
-                }
+            &:active path {
+                fill: map.get(c.$grey, 400);
             }
         }
 
         @media (pointer: fine) {
-            &:hover {
-                path {
-                    fill: map.get(c.$grey, 400);
-                }
+            &:hover path {
+                fill: map.get(c.$grey, 400);
             }
         }
     }
