@@ -18,13 +18,16 @@
         border-radius: 10px;
         width: 100%;
         max-inline-size: 15.5rem;
-        left: 61.5%;
-        bottom: 141%;
+        left: 52%;
+        bottom: 133%;
         align-items: center;
+        box-shadow: 0 .625rem .625rem 0 rgba(201, 213, 225, 0.5);
+;
     }
 
     @media screen and (min-width: 90rem) {
-        
+        left: 60.5%;
+        bottom: 140%;
     }
 
     &__text_social {

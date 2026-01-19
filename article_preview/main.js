@@ -1,3 +1,5 @@
+const tabletSize = window.matchMedia("(width <= 47.938em)");
+
 document.addEventListener("DOMContentLoaded", () => {
     const profile = document.getElementById("profile");
     const toast = document.getElementById("toast");
@@ -10,8 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
     iconShareButton.addEventListener("click", () => {
         iconShareButtonCircle.classList.toggle("fill--grey_500");
         iconShareButtonPath.classList.toggle("fill--white");
-        // containerPositioning.classList.toggle("container_positioning--dark");
-        // profile.classList.toggle("profile--is_hidden");
         toast.classList.toggle("toast--is_visible");
+
+        if (tabletSize.matches) {
+            containerPositioning.classList.toggle("container_positioning--dark");
+            profile.classList.toggle("profile--is_hidden");
+        } else { return false }
     })
 })
