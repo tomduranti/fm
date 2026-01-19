@@ -1,0 +1,60 @@
+@use "../abstract/color" as c;
+@use "../abstract/spacing" as s;
+@use "../abstract/mixins" as m;
+@use "sass:map";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page_wrapper {
+    background-color: map.get(c.$grey, 300);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    inline-size: 100%;
+    max-inline-size: 16.688rem;
+    margin: map.get(s.$spacing, 400) map.get(s.$spacing, 380) map.get(s.$spacing, 405);
+    @media screen and (min-width: 48rem) {
+        max-inline-size: 19.438rem;
+        margin: map.get(s.$spacing, 505) map.get(s.$spacing, 425) map.get(s.$spacing, 300) map.get(s.$spacing, 400);
+    }
+
+    @media screen and (min-width: 90rem) {
+        max-inline-size: 22.813rem;
+        margin: map.get(s.$spacing, 380) map.get(s.$spacing, 0) map.get(s.$spacing, 300) map.get(s.$spacing, 400);
+    }
+}
+
+.container_positioning {
+    display: flex;
+    @include m.spacing(gap, 800);
+    justify-content: center;
+    align-items: center;
+    @include m.spacing(padding-block-start, 175);
+    @include m.spacing(padding-block-end, 225);
+
+    position: relative;
+    @media screen and (min-width: 48rem) {
+        position: relative;
+        @include m.spacing(gap, 1200);
+        @include m.spacing(padding-block-start, 0);
+        @include m.spacing(padding-block-end, 505);
+    }
+
+    @media screen and (min-width: 90rem) {
+        max-inline-size: 22.813rem;
+        margin-inline-start: 2rem;
+        padding-block-end: 1.875rem;
+        gap: 10rem;
+    }
+}
+
+.container_positioning--dark {
+    background-color: map.get(c.$grey, 900);
+}

@@ -1,0 +1,39 @@
+@use "./color" as c;
+@use "./typography" as t;
+@use "./mixins" as m;
+@use "sass:map";
+
+.text_preset_1 { @include m.text_preset(t.$font_family, map.get(t.$fs, 20), map.get(t.$fw, "bold"), 1.3, 0.016rem, map.get(c.$grey, 900)); }
+%text_preset_2 { @include m.text_preset(t.$font_family, map.get(t.$fs, 13), map.get(t.$fw, "regular"), 1.4, .001rem); }
+.text_preset_3 { @include m.text_preset(t.$font_family, map.get(t.$fs, 13), map.get(t.$fw, "medium"),  1.4, .25rem); }
+
+%text_preset_2--medium {
+    @extend %text_preset_2;
+    font-weight: map.get(t.$fw, "medium");
+}
+
+.text_preset_2--medium_400 {
+    @extend %text_preset_2;
+    @extend %text_preset_2--medium;
+    color: map.get(c.$grey, 400);
+}
+
+.text_preset_2--medium_500 {
+    @extend %text_preset_2;
+    @extend %text_preset_2--medium;
+    color: map.get(c.$grey, 500);
+}
+
+.text_preset_2--bold {
+    @extend %text_preset_2;
+    font-weight: map.get(t.$fw, "bold");
+    color: map.get(c.$grey, 900);
+}
+
+.fill--white {
+    fill: c.$white;
+}
+
+.fill--grey_500 {
+    fill: map.get(c.$grey, 500);
+}
