@@ -1,4 +1,4 @@
-const tabletSize = window.matchMedia("(width <= 47.938em)");
+const tabletSize = window.matchMedia("(max-width: 47.938em)");
 
 document.addEventListener("DOMContentLoaded", () => {
     const profile = document.getElementById("profile");
