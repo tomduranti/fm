@@ -18,6 +18,10 @@
         @extend %button;
         outline-color: c.$grey;
         margin-block-end: map.get(s.$spacing, 200);
+
+        @media screen and (min-width: 48rem) {
+            margin-block-end: map.get(s.$spacing, 100);
+        }
     }
 
     &__submit {
