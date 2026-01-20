@@ -1,0 +1,26 @@
+@use "../abstract/color" as c;
+@use "../abstract/spacing" as s;
+@use "sass:map";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page_wrapper {
+  background-color: map.get(c.$blue, 800);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+    max-inline-size: 20.438rem;
+    margin: map.get(s.$spacing, 500) auto 2.75rem;
+
+    @media screen and (min-width: 48rem) {
+        max-inline-size: 33rem;
+        margin-block-start: map.get(s.$spacing, 500);
+        margin-block-end: map.get(s.$spacing, 0);
+    }
+}
