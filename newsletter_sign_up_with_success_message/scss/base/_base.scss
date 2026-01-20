@@ -15,12 +15,18 @@ body {
 }
 
 .container {
-    max-inline-size: 20.438rem;
-    margin: map.get(s.$spacing, 500) auto 2.75rem;
+  max-inline-size: 20.438rem;
+  margin: map.get(s.$spacing, 500) auto 2.75rem;
 
-    @media screen and (min-width: 48rem) {
-        max-inline-size: 33rem;
-        margin-block-start: map.get(s.$spacing, 500);
-        margin-block-end: map.get(s.$spacing, 0);
-    }
+  @media screen and (min-width: 48rem) {
+      max-inline-size: 33rem;
+      margin-block-start: map.get(s.$spacing, 500);
+      margin-block-end: map.get(s.$spacing, 0);
+  }
+
+  @media screen and (min-width: 90rem) {
+    margin: 4.469rem map.get(s.$spacing, 800) 4.469rem 0;
+    max-inline-size: 23.5rem;
+  }
+
 }

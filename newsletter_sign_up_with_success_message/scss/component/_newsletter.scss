@@ -18,11 +18,26 @@
         border-radius: 2.25rem;
     }
 
+    @media screen and (min-width: 90rem) {
+        flex-direction: row;
+        max-inline-size: 56.5rem;
+        padding: map.get(s.$spacing, 300) map.get(s.$spacing, 400);
+    }
+
     &__img {
         line-height: 0;
-        
         img {
             object-fit: cover;
+        }
+        @media screen and (min-width: 90rem) {
+            order: 2;
+            max-inline-size: 25rem;
+        }
+    }
+
+    &__content {
+        @media screen and (min-width: 90rem) {
+            order: 1;
         }
     }
 
@@ -34,6 +49,11 @@
         margin-block-end: map.get(s.$spacing, 500);
         @media screen and (min-width: 48rem) {
             margin-block-end: map.get(s.$spacing, 300);
+        }
+
+        @media screen and (min-width: 90rem) {
+            gap: map.get(s.$spacing, 400);
+            margin-block-end: map.get(s.$spacing, 400);
         }
     }
 }
