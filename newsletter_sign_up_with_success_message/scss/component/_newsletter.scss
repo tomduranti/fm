@@ -1,0 +1,40 @@
+@use "../abstract/color" as c;
+@use "../abstract/spacing" as s;
+@use "../abstract/mixins" as m;
+@use "sass:map";
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    inline-size: 100%;
+
+    &__img {
+        line-height: 0;
+        block-size: 17.75rem;
+
+        img {
+            block-size: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: map.get(s.$spacing, 300);
+        inline-size: 100%;
+        margin-block-end: map.get(s.$spacing, 500);
+    }
+}
+
+.benefit_list {
+    display: flex;
+    flex-direction: column;
+    gap: map.get(s.$spacing, 100);
+
+    &__item {
+        display: flex;
+        gap: map.get(s.$spacing, 200);
+        align-items: start;
+    }
+}
