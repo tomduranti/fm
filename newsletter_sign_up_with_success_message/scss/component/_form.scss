@@ -14,6 +14,14 @@
     flex-direction: column;
     gap: map.get(s.$spacing, 100);
 
+    & > *:focus-visible {
+        outline: 2px solid black;
+    }
+
+    & > *:hover {
+        outline-color: map.get(c.$red, 200);
+    }
+
     &__email {
         @extend %button;
         outline-color: c.$grey;
@@ -28,9 +36,19 @@
         }
     }
 
+    #error {
+        color: map.get(c.$red, 200);
+    }
+
+    .email_label {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__submit {
         @extend %button;
         background-color: map.get(c.$blue, 800);
         color: c.$white;
+        cursor: pointer;
     }
 }

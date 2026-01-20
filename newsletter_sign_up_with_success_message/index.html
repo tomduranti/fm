@@ -47,11 +47,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <form class="form">
-                            <label class="text_preset_3" for="mail">Email address</label>
+                        <form class="form" id="form" novalidate>
+                            <div class="email_label">
+                                <label class="text_preset_3" for="mail">Email address</label>
+                                <span class="is_hidden text_preset_3" id="error" aria-live="polite">Valid email required</span>
+                            </div>
                             <input class="form__email text_preset_2" type="email" id="mail" name="mail"
                                 placeholder="email@company.com" required>
-                            <button class="form__submit text_preset_2--bold" type="submit">Subscribe to monthly
+                            <button class="form__submit text_preset_2--bold" type="submit" id="submit">Subscribe to monthly
                                 newsletter</button>
                         </form>
                     </div>
