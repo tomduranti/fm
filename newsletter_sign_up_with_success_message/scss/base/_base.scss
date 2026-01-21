@@ -1,0 +1,50 @@
+@use "../abstract/color" as c;
+@use "../abstract/spacing" as s;
+@use "sass:map";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page_wrapper {
+  background-color: map.get(c.$blue, 800);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+%page {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    max-inline-size: 23.438rem;
+    overflow: hidden;
+    background-color: c.$white;
+}
+
+.container--newsletter {
+  max-inline-size: 20.438rem;
+  margin: map.get(s.$spacing, 500) auto 2.75rem;
+
+  @media screen and (min-width: 48rem) {
+      max-inline-size: 33rem;
+      margin-block-start: map.get(s.$spacing, 500);
+      margin-block-end: map.get(s.$spacing, 0);
+  }
+
+  @media screen and (min-width: 90rem) {
+    margin: 4.469rem map.get(s.$spacing, 800) 4.469rem 0;
+    max-inline-size: 23.5rem;
+  }
+}
+
+.container--success {
+  max-inline-size: 20.438rem;
+  margin: 9.313rem map.get(s.$spacing, 300) 4.375rem;
+  @media screen and (min-width: 48rem) {
+      max-inline-size: 23.5rem;
+      margin: 3.75rem map.get(s.$spacing, 800);
+  }
+}

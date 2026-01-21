@@ -1,0 +1,66 @@
+@use "../abstract/color" as c;
+@use "../abstract/spacing" as s;
+@use "../abstract/mixins" as m;
+@use "../base/base";
+@use "sass:map";
+
+.newsletter {
+    @extend %page;
+
+    @media screen and (min-width: 48rem) {
+        max-inline-size: 38rem;
+        padding: 2.679rem map.get(s.$spacing, 500);
+        border-radius: 2.25rem;
+    }
+
+    @media screen and (min-width: 90rem) {
+        flex-direction: row;
+        max-inline-size: 56.5rem;
+        padding: map.get(s.$spacing, 300) map.get(s.$spacing, 400);
+    }
+
+    &__img {
+        line-height: 0;
+        img {
+            object-fit: cover;
+        }
+        @media screen and (min-width: 90rem) {
+            order: 2;
+            max-inline-size: 25rem;
+        }
+    }
+
+    &__content {
+        @media screen and (min-width: 90rem) {
+            order: 1;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: map.get(s.$spacing, 300);
+        inline-size: 100%;
+        margin-block-end: map.get(s.$spacing, 500);
+        @media screen and (min-width: 48rem) {
+            margin-block-end: map.get(s.$spacing, 300);
+        }
+
+        @media screen and (min-width: 90rem) {
+            gap: map.get(s.$spacing, 400);
+            margin-block-end: map.get(s.$spacing, 400);
+        }
+    }
+}
+
+.benefit_list {
+    display: flex;
+    flex-direction: column;
+    gap: map.get(s.$spacing, 100);
+
+    &__item {
+        display: flex;
+        gap: map.get(s.$spacing, 200);
+        align-items: start;
+    }
+}

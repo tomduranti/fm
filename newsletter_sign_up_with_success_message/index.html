@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset_min.css">
+        <link rel="stylesheet" href="css/main_min.css">
+        <script src="main.js"></script>
+        <title>Newsletter sign-up with success message</title>
+        <link rel="shortcut icon" href="images/favicon_sdm.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    </head>
+
+    <body>
+        <main class="page_wrapper">
+            <!-- Form page -->
+            <article class="newsletter" id="newsletter_page">
+                <picture class="newsletter__img">
+                    <source srcset="assets/illustration_sign_up_desktop.svg" media="(min-width: 90rem)">
+                    <source srcset="assets/illustration_sign_up_tablet.svg" media="(min-width: 48rem)">
+                    <img src="assets/illustration_sign_up_mobile.svg" alt="sign up image">
+                </picture>
+                <div class="newsletter__content">
+                    <div class="container--newsletter">
+                        <div class="newsletter__text">
+                            <h1 class="newsletter__heading text_preset_1">Stay updated!</h1>
+                            <h2 class="newsletter__subheading text_preset_2">Join 60,000+ product managers receiving monthly
+                                updates on:</h2>
+                            <ul class="benefit_list">
+                                <li class="benefit_list__item">
+                                    <img src="assets/icon_list.svg" alt="">
+                                    <h3 class="benefit_list__benefit text_preset_2">Product discovery and building what
+                                        matters</h3>
+                                </li>
+                                <li class="benefit_list__item">
+                                    <img src="assets/icon_list.svg" alt="">
+                                    <h3 class="benefit_list__benefit text_preset_2">Measuring to ensure updates are a
+                                        success</h3>
+                                </li>
+                                <li class="benefit_list__item">
+                                    <img src="assets/icon_list.svg" alt="">
+                                    <h3 class="benefit_list__benefit text_preset_2">And much more!</h3>
+                                </li>
+                            </ul>
+                        </div>
+                        <form class="form" id="form" novalidate>
+                            <div class="email_label">
+                                <label class="text_preset_3" for="mail">Email address</label>
+                                <span class="is_hidden text_preset_3" id="error" id="" aria-live="polite">Valid email required</span>
+                            </div>
+                            <input class="form__email text_preset_2" type="email" id="email" name="mail"
+                                placeholder="email@company.com" required>
+                            <button class="button--submit text_preset_2--bold" type="submit" id="submit">Subscribe to monthly
+                                newsletter</button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Success page -->
+             <article class="success_page is_hidden" id="success_page">
+                <div class="container--success">
+                    <div class="success_page__text">
+                        <div class="success_page__img">
+                            <img src="assets/icon_success.svg" alt="">
+                        </div>
+                        <h2 class="success_page__heading text_preset_1">Thanks for subscribing!</h2>
+                        <p class="text_preset_2">A confirmation email has been sent to <span class="text_preset_2--bold" id="success_email"></span>. Please open it and click the button inside to confirm your subscription</p>
+                    </div>
+                    <button class="button--submit text_preset_2--bold" id="dismiss">Dismiss message</button>
+                </div>
+             </article>
+        </main>
+    </body>
+
+</html>

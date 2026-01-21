@@ -1,0 +1,43 @@
+@use "../abstract/color" as c;
+@use "../abstract/spacing" as s;
+@use "../component/button";
+@use "sass:map";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: map.get(s.$spacing, 100);
+
+    & > *:focus-visible {
+        outline: 2px solid black;
+    }
+
+    &__email {
+        @extend %button;
+        outline-color: c.$grey;
+        margin-block-end: map.get(s.$spacing, 200);
+
+        @media screen and (min-width: 48rem) {
+            margin-block-end: map.get(s.$spacing, 100);
+        }
+
+        @media screen and (min-width: 90rem) {
+            margin-block-end: map.get(s.$spacing, 200);
+        }
+
+        &--is_invalid {
+            background-color: map.get(c.$red, 100);
+            outline-color: map.get(c.$red, 200);
+            color: map.get(c.$red, 200);
+        }
+    }
+
+    #error {
+        color: map.get(c.$red, 200);
+    }
+
+    .email_label {
+        display: flex;
+        justify-content: space-between;
+    }
+}
