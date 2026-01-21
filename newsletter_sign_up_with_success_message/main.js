@@ -3,12 +3,17 @@ window.addEventListener("DOMContentLoaded", () => {
     const email = document.getElementById("email");
     const error = document.getElementById("error");
     const submitButton = document.getElementById("submit");
+    const dismissButton = document.getElementById("dismiss");
     const emailRegExp = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)*$/i;
 
     function isValidEmail() {
         const validity = email.value.length !== 0 && emailRegExp.test(email.value);
         return validity;
     };
+
+    function changeBackgroundColor(element, color) {
+        element.style.backgroundColor = color;
+    }
 
     email.addEventListener("input", () => {
         email.classList.contains("form__email--is_invalid") ? email.classList.remove("form__email--is_invalid") : false;
@@ -24,5 +29,9 @@ window.addEventListener("DOMContentLoaded", () => {
             email.classList.add("form__email--is_invalid");
             error.classList.remove("is_hidden");
         }
+    })
+
+    dismissButton.addEventListener("click", () => {
+        dismissButton.style.background = "linear-gradient(90deg, #FF6A3A, #FF527B)";
     })
 })
