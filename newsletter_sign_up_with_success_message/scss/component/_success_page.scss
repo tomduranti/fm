@@ -1,16 +1,11 @@
 @use "../abstract/color" as c;
 @use "../abstract/spacing" as s;
 @use "../abstract/mixins" as m;
+@use "../base/base";
 @use "sass:map";
 
 .success_page {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-self: center;
-    max-inline-size: 23.438rem;
-    overflow: hidden;
-    background-color: c.$white;
+    @extend %page;
 
     @media screen and (min-width: 48rem) {
       max-inline-size: 31.5rem;

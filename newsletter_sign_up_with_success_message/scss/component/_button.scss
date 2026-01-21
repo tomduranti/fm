@@ -15,7 +15,7 @@
     color: c.$white;
     cursor: pointer;
 
-    &--is_valid {
+    &:hover {
         background: map.get(c.$gradient, linear_gradient);
     }
 }

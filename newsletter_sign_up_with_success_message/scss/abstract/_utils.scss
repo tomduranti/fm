@@ -19,5 +19,9 @@
 }
 
 .is_hidden {
-    display: none;
+    display: none !important;
+}
+
+.is_valid {
+    background: map.get(c.$gradient, linear_gradient) !important;
 }

@@ -1,6 +1,9 @@
 window.addEventListener("DOMContentLoaded", () => {
+    const newsletterPage = document.getElementById("newsletter_page");
+    const successPage = document.getElementById("success_page");
     const form = document.getElementById("form");
     const email = document.getElementById("email");
+    const successEmail = document.getElementById("success_email");
     const error = document.getElementById("error");
     const submitButton = document.getElementById("submit");
     const dismissButton = document.getElementById("dismiss");
@@ -11,20 +14,22 @@ window.addEventListener("DOMContentLoaded", () => {
         return validity;
     };
 
-    function changeBackgroundColor(element, color) {
-        element.style.backgroundColor = color;
-    }
-
     email.addEventListener("input", () => {
         email.classList.contains("form__email--is_invalid") ? email.classList.remove("form__email--is_invalid") : false;
         error.classList.contains("is_hidden") ? false : error.classList.add("is_hidden");
-        isValidEmail()? submitButton.classList.add("form__submit--is_valid"): submitButton.classList.remove("form__submit--is_valid");
+        isValidEmail() ? submitButton.classList.add("is_valid") : submitButton.classList.remove("is_valid");
     })
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         if (isValidEmail()) {
-            submitButton.classList.contains("form__submit--is_valid")? submitButton.classList.remove("form__submit--is_valid"): false;
+            //submit button gets color if email string is correct
+            submitButton.classList.contains("is_valid") ? submitButton.classList.remove("is_valid") : false;
+            //show success page and hide newsletter page
+            newsletterPage.classList.add("is_hidden");
+            successPage.classList.remove("is_hidden");
+            successEmail.innerHTML = email.value;
+
         } else {
             email.classList.add("form__email--is_invalid");
             error.classList.remove("is_hidden");
@@ -32,6 +37,6 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 
     dismissButton.addEventListener("click", () => {
-        dismissButton.style.background = "linear-gradient(90deg, #FF6A3A, #FF527B)";
+        window.location.reload();
     })
 })
