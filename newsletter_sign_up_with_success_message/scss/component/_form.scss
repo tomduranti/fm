@@ -18,10 +18,6 @@
         outline: 2px solid black;
     }
 
-    & > *:hover {
-        outline-color: map.get(c.$red, 200);
-    }
-
     &__email {
         @extend %button;
         outline-color: c.$grey;
@@ -33,6 +29,12 @@
 
         @media screen and (min-width: 90rem) {
             margin-block-end: map.get(s.$spacing, 200);
+        }
+
+        &--is_invalid {
+            background-color: map.get(c.$red, 100);
+            outline-color: map.get(c.$red, 200);
+            color: map.get(c.$red, 200);
         }
     }
 
@@ -50,5 +52,9 @@
         background-color: map.get(c.$blue, 800);
         color: c.$white;
         cursor: pointer;
+
+        &--is_valid {
+            background: map.get(c.$gradient, linear_gradient);
+        }
     }
 }
