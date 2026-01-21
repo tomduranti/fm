@@ -1,0 +1,21 @@
+@use "../abstract/color" as c;
+@use "../abstract/spacing" as s;
+@use "../abstract/mixins" as m;
+@use "sass:map";
+
+.success_page {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    max-inline-size: 23.438rem;
+    overflow: hidden;
+    background-color: c.$white;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: map.get(s.$spacing, 400);
+        margin-block-end: 16.438rem;
+    }
+}

@@ -14,7 +14,7 @@ body {
   justify-content: center;
 }
 
-.container {
+.container--newsletter {
   max-inline-size: 20.438rem;
   margin: map.get(s.$spacing, 500) auto 2.75rem;
 
@@ -28,5 +28,9 @@ body {
     margin: 4.469rem map.get(s.$spacing, 800) 4.469rem 0;
     max-inline-size: 23.5rem;
   }
+}
 
+.container--success {
+    max-inline-size: 20.438rem;
+    margin: 9.313rem map.get(s.$spacing, 300) 4.375rem;
 }
