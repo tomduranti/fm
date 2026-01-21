@@ -12,10 +12,19 @@
     overflow: hidden;
     background-color: c.$white;
 
+    @media screen and (min-width: 48rem) {
+      max-inline-size: 31.5rem;
+      border-radius: 2.25rem;
+    }
+
     &__text {
         display: flex;
         flex-direction: column;
         gap: map.get(s.$spacing, 400);
         margin-block-end: 16.438rem;
+
+        @media screen and (min-width: 48rem) {
+            margin-block-end: map.get(s.$spacing, 400);
+        }
     }
 }

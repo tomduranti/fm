@@ -31,6 +31,10 @@ body {
 }
 
 .container--success {
-    max-inline-size: 20.438rem;
-    margin: 9.313rem map.get(s.$spacing, 300) 4.375rem;
+  max-inline-size: 20.438rem;
+  margin: 9.313rem map.get(s.$spacing, 300) 4.375rem;
+  @media screen and (min-width: 48rem) {
+      max-inline-size: 23.5rem;
+      margin: 3.75rem map.get(s.$spacing, 800);
+  }
 }
