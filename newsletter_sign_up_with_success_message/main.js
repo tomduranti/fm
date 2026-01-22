@@ -16,11 +16,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
     function showError() {
         email.classList.add("is_invalid");
+        email.setAttribute('aria-describedby', 'error');
+        email.setAttribute('aria-invalid', 'true');
         error.classList.remove("is_hidden");
     }
 
     function hideError() {
         email.classList.remove("is_invalid");
+        email.removeAttribute('aria-describedby');
+        email.setAttribute('aria-invalid', 'false');
         error.classList.add("is_hidden");
     }
 
@@ -39,7 +43,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (isValidEmail()) {
             submitButton.classList.remove("is_valid");
             switchPage();
-            successEmail.innerHTML = email.value;
+            successEmail.textContent = email.value;
         } else {
             showError();
         }
