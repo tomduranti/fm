@@ -14,25 +14,34 @@ window.addEventListener("DOMContentLoaded", () => {
         return validity;
     };
 
+    function showError() {
+        email.classList.add("is_invalid");
+        error.classList.remove("is_hidden");
+    }
+
+    function hideError() {
+        email.classList.remove("is_invalid");
+        error.classList.add("is_hidden");
+    }
+
+    function switchPage() {
+        newsletterPage.classList.add("is_hidden");
+        successPage.classList.remove("is_hidden");
+    }
+
     email.addEventListener("input", () => {
-        email.classList.contains("form__email--is_invalid") ? email.classList.remove("form__email--is_invalid") : false;
-        error.classList.contains("is_hidden") ? false : error.classList.add("is_hidden");
-        isValidEmail() ? submitButton.classList.add("is_valid") : submitButton.classList.remove("is_valid");
+        hideError();
+        submitButton.classList.toggle("is_valid", isValidEmail());
     })
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         if (isValidEmail()) {
-            //submit button gets color if email string is correct
-            submitButton.classList.contains("is_valid") ? submitButton.classList.remove("is_valid") : false;
-            //show success page and hide newsletter page
-            newsletterPage.classList.add("is_hidden");
-            successPage.classList.remove("is_hidden");
+            submitButton.classList.remove("is_valid");
+            switchPage()
             successEmail.innerHTML = email.value;
-
         } else {
-            email.classList.add("form__email--is_invalid");
-            error.classList.remove("is_hidden");
+            showError();
         }
     })
 
