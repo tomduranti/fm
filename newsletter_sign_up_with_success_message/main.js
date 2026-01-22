@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const error = document.getElementById("error");
     const submitButton = document.getElementById("submit");
     const dismissButton = document.getElementById("dismiss");
-    const emailRegExp = /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d-]+(?:\.[a-z\d-]+)*$/i;
+    const emailRegExp = /^((?:[A-Za-z0-9!#$%&'*+\-\/=?^_`{|}~]|(?<=^|\.)"|"(?=$|\.|@)|(?<=".*)[ .](?=.*")|(?<!\.)\.){1,64})(@)((?:[A-Za-z0-9.\-])*(?:[A-Za-z0-9])\.(?:[A-Za-z0-9]){2,})$/;
 
     function isValidEmail() {
         const validity = email.value.length !== 0 && emailRegExp.test(email.value);
@@ -28,9 +28,13 @@ window.addEventListener("DOMContentLoaded", () => {
         error.classList.add("is_hidden");
     }
 
-    function switchPage() {
-        newsletterPage.classList.add("is_hidden");
-        successPage.classList.remove("is_hidden");
+    function switchPage(from, to) {
+        from.classList.add("is_hidden");
+        to.classList.remove("is_hidden");
+    }
+
+    function resetForm() {
+        form.reset();
     }
 
     email.addEventListener("input", () => {
@@ -42,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         if (isValidEmail()) {
             submitButton.classList.remove("is_valid");
-            switchPage();
+            switchPage(newsletterPage, successPage);
             successEmail.textContent = email.value;
         } else {
             showError();
@@ -50,6 +54,7 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 
     dismissButton.addEventListener("click", () => {
-        window.location.reload();
+        switchPage(successPage, newsletterPage);
+        form.reset();
     })
 })
