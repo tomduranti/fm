@@ -24,12 +24,6 @@
         @media screen and (min-width: 90rem) {
             margin-block-end: map.get(s.$spacing, 200);
         }
-
-        &--is_invalid {
-            background-color: map.get(c.$red, 100);
-            outline-color: map.get(c.$red, 200);
-            color: map.get(c.$red, 200);
-        }
     }
 
     #error {

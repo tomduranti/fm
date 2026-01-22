@@ -25,3 +25,9 @@
 .is_valid {
     background: map.get(c.$gradient, linear_gradient) !important;
 }
+
+.is_invalid {
+    background-color: map.get(c.$red, 100) !important;
+    outline-color: map.get(c.$red, 200) !important;
+    color: map.get(c.$red, 200) !important;
+}
