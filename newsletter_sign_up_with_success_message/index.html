@@ -34,27 +34,27 @@
                             <ul class="benefit_list">
                                 <li class="benefit_list__item">
                                     <img src="assets/icon_list.svg" alt="">
-                                    <h3 class="benefit_list__benefit text_preset_2">Product discovery and building what
-                                        matters</h3>
+                                    <span class="benefit_list__benefit text_preset_2">Product discovery and building what
+                                        matters</span>
                                 </li>
                                 <li class="benefit_list__item">
                                     <img src="assets/icon_list.svg" alt="">
-                                    <h3 class="benefit_list__benefit text_preset_2">Measuring to ensure updates are a
-                                        success</h3>
+                                    <span class="benefit_list__benefit text_preset_2">Measuring to ensure updates are a
+                                        success</span>
                                 </li>
                                 <li class="benefit_list__item">
                                     <img src="assets/icon_list.svg" alt="">
-                                    <h3 class="benefit_list__benefit text_preset_2">And much more!</h3>
+                                    <span class="benefit_list__benefit text_preset_2">And much more!</span>
                                 </li>
                             </ul>
                         </div>
                         <form class="form" id="form" novalidate>
                             <div class="email_label">
-                                <label class="text_preset_3" for="mail">Email address</label>
-                                <span class="is_hidden text_preset_3" id="error" id="" aria-live="polite">Valid email required</span>
+                                <label class="text_preset_3" for="email">Email address</label>
+                                <span class="error is_hidden text_preset_3" id="error" aria-live="polite">Valid email required</span>
                             </div>
                             <input class="form__email text_preset_2" type="email" id="email" name="mail"
-                                placeholder="email@company.com" required>
+                                placeholder="email@company.com" required aria-describedby="error" aria-invalid="true">
                             <button class="button--submit text_preset_2--bold" type="submit" id="submit">Subscribe to monthly
                                 newsletter</button>
                         </form>
@@ -63,7 +63,7 @@
             </article>
 
             <!-- Success page -->
-             <article class="success_page is_hidden" id="success_page">
+             <section class="success_page is_hidden" id="success_page" aria-live="polite" aria-atomic="true">
                 <div class="container--success">
                     <div class="success_page__text">
                         <div class="success_page__img">
@@ -72,9 +72,9 @@
                         <h2 class="success_page__heading text_preset_1">Thanks for subscribing!</h2>
                         <p class="text_preset_2">A confirmation email has been sent to <span class="text_preset_2--bold" id="success_email"></span>. Please open it and click the button inside to confirm your subscription</p>
                     </div>
-                    <button class="button--submit text_preset_2--bold" id="dismiss">Dismiss message</button>
+                    <button class="button--submit text_preset_2--bold" id="dismiss" type="button">Dismiss message</button>
                 </div>
-             </article>
+             </section>
         </main>
     </body>
 

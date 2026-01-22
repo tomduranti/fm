@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         if (isValidEmail()) {
             submitButton.classList.remove("is_valid");
-            switchPage()
+            switchPage();
             successEmail.innerHTML = email.value;
         } else {
             showError();

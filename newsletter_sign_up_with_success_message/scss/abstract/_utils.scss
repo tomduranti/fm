@@ -3,15 +3,12 @@
 @use "./mixins" as m;
 @use "sass:map";
 
-.text_preset_1 { @include m.text_preset(t.$font_family, map.get(t.$fs, 40), map.get(t.$fw, "bold"), 1, 0, map.get(c.$blue, 800)); }
+.text_preset_1 { 
+    @include m.text_preset(t.$font_family, map.get(t.$fs, 40), map.get(t.$fw, "bold"), 1, 0, map.get(c.$blue, 800));
+    @media screen and (min-width: 48rem) { font-size: map.get(t.$fs, 56); }
+}
 .text_preset_2 { @include m.text_preset(t.$font_family, map.get(t.$fs, 16), map.get(t.$fw, "regular"), 1.5, 0, map.get(c.$blue, 800)); }
 .text_preset_3 { @include m.text_preset(t.$font_family, map.get(t.$fs, 12), map.get(t.$fw, "bold"), 1.5, 0, map.get(c.$blue, 800)); }
-
-.text_preset_1 { 
-    @media screen and (min-width: 48rem) {
-       font-size: map.get(t.$fs, 56);
-    }
-}
 
 .text_preset_2--bold {
     @extend .text_preset_2;
