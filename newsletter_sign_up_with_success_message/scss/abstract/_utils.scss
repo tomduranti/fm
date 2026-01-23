@@ -1,18 +1,17 @@
-@use "./color" as c;
-@use "./typography" as t;
+@use "./variables" as v;
 @use "./mixins" as m;
 @use "sass:map";
 
 .text_preset_1 { 
-    @include m.text_preset(t.$font_family, map.get(t.$fs, 40), map.get(t.$fw, "bold"), 1, 0, map.get(c.$blue, 800));
-    @media screen and (min-width: 48rem) { font-size: map.get(t.$fs, 56); }
+    @include m.text_preset(v.$font_family, map.get(v.$fs, 40), map.get(v.$fw, "bold"), 1, 0, map.get(v.$blue, 800));
+    @media screen and (min-width: map.get(v.$breakpoint, tablet)) { font-size: map.get(v.$fs, 56); }
 }
-.text_preset_2 { @include m.text_preset(t.$font_family, map.get(t.$fs, 16), map.get(t.$fw, "regular"), 1.5, 0, map.get(c.$blue, 800)); }
-.text_preset_3 { @include m.text_preset(t.$font_family, map.get(t.$fs, 12), map.get(t.$fw, "bold"), 1.5, 0, map.get(c.$blue, 800)); }
+.text_preset_2 { @include m.text_preset(v.$font_family, map.get(v.$fs, 16), map.get(v.$fw, "regular"), 1.5, 0, map.get(v.$blue, 800)); }
+.text_preset_3 { @include m.text_preset(v.$font_family, map.get(v.$fs, 12), map.get(v.$fw, "bold"), 1.5, 0, map.get(v.$blue, 800)); }
 
 .text_preset_2--bold {
     @extend .text_preset_2;
-    font-weight: map.get(t.$fw, "bold");
+    font-weight: map.get(v.$fw, "bold");
 }
 
 .is_hidden {
@@ -20,11 +19,11 @@
 }
 
 .is_valid {
-    background: map.get(c.$gradient, linear_gradient) !important;
+    background: map.get(v.$gradient, linear_gradient) !important;
 }
 
 .is_invalid {
-    background-color: map.get(c.$red, 100) !important;
-    outline-color: map.get(c.$red, 200) !important;
-    color: map.get(c.$red, 200) !important;
+    background-color: map.get(v.$red, 100) !important;
+    outline-color: map.get(v.$red, 200) !important;
+    color: map.get(v.$red, 200) !important;
 }

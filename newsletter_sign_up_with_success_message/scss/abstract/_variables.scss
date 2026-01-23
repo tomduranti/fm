@@ -1,0 +1,59 @@
+//COLORS
+$blue: (
+    700: #242742,
+    800: #36384D
+);
+$gradient: (
+    background_default: #FF6A3A,
+    linear_gradient: linear-gradient(90deg, #FF6A3A, #FF527B)
+);
+$grey: #949494;
+$red: (
+    100: #FFE7E6,
+    200: #FF6155
+);
+$white: #FFFFFF;
+
+//TYPOGRAPHY
+$font_family: "Roboto", sans-serif;
+$base_typography_unit: 1rem;
+
+$fw: (
+    "regular": 400,
+    "bold": 700,
+);
+
+$fs: (
+    12: $base_typography_unit * .75,
+    16: $base_typography_unit,
+    40: $base_typography_unit * 2.5,
+    56: $base_typography_unit * 3.5,
+);
+
+//SPACING
+$base_spacing_unit: .5rem; // 8px
+$spacing: (
+  0:    $base_spacing_unit * 0,       
+  100:  $base_spacing_unit,           
+  200:  $base_spacing_unit * 2,       // 16px
+  300:  $base_spacing_unit * 3,       // 24px
+  400:  $base_spacing_unit * 4,       // 32px
+  500:  $base_spacing_unit * 5,       // 40px
+  600:  $base_spacing_unit * 6,       // 48px
+  800:  $base_spacing_unit * 8,       // 64px
+  900:  $base_spacing_unit * 9,       // 72px
+  1300: $base_spacing_unit * 13,      // 104px
+);
+
+//BORDER
+$base_radius_unit: .25rem; // 4px
+$border_radius: (
+    8: $base_radius_unit * 2,
+    36: $base_radius_unit * 9,
+);
+
+//BREAKPOINTS   
+$breakpoint: (
+    tablet: 48rem,
+    desktop: 90rem,
+);

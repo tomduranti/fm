@@ -33,10 +33,6 @@ window.addEventListener("DOMContentLoaded", () => {
         to.classList.remove("is_hidden");
     }
 
-    function resetForm() {
-        form.reset();
-    }
-
     email.addEventListener("input", () => {
         hideError();
         submitButton.classList.toggle("is_valid", isValidEmail());
