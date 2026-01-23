@@ -1,5 +1,4 @@
-@use "../abstract/color" as c;
-@use "../abstract/spacing" as s;
+@use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 @use "../base/base";
 @use "sass:map";
@@ -7,19 +6,19 @@
 .success_page {
     @extend %page;
 
-    @media screen and (min-width: 48rem) {
+    @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
       max-inline-size: 31.5rem;
-      border-radius: 2.25rem;
+      border-radius: map.get(v.$border_radius, 36);
     }
 
     &__text {
         display: flex;
         flex-direction: column;
-        gap: map.get(s.$spacing, 400);
+        gap: map.get(v.$spacing, 400);
         margin-block-end: 16.438rem;
 
-        @media screen and (min-width: 48rem) {
-            margin-block-end: map.get(s.$spacing, 400);
+        @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
+            margin-block-end: map.get(v.$spacing, 400);
         }
     }
 }

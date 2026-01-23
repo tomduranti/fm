@@ -1,21 +1,20 @@
-@use "../abstract/color" as c;
-@use "../abstract/spacing" as s;
+@use "../abstract/variables" as v;
 @use "sass:map";
 
 %button {
     inline-size: 100%;
     outline: 1px solid transparent;
-    border-radius: .5rem;
-    padding: map.get(s.$spacing, 200) map.get(s.$spacing, 300);
+    border-radius: v.$base_radius_unit;
+    padding: map.get(v.$spacing, 200) map.get(v.$spacing, 300);
 }
 
 .button--submit {
     @extend %button;
-    background-color: map.get(c.$blue, 800);
-    color: c.$white;
+    background-color: map.get(v.$blue, 800);
+    color: v.$white;
     cursor: pointer;
 
     &:hover {
-        background: map.get(c.$gradient, linear_gradient);
+        background: map.get(v.$gradient, linear_gradient);
     }
 }

@@ -1,5 +1,4 @@
-@use "../abstract/color" as c;
-@use "../abstract/spacing" as s;
+@use "../abstract/variables" as v;
 @use "sass:map";
 
 body {
@@ -8,7 +7,7 @@ body {
 }
 
 .page_wrapper {
-  background-color: map.get(c.$blue, 800);
+  background-color: map.get(v.$blue, 800);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -21,30 +20,30 @@ body {
     align-self: center;
     max-inline-size: 23.438rem;
     overflow: hidden;
-    background-color: c.$white;
+    background-color: v.$white;
 }
 
 .container--newsletter {
   max-inline-size: 20.438rem;
-  margin: map.get(s.$spacing, 500) auto 2.75rem;
+  margin: map.get(v.$spacing, 500) auto 2.75rem;
 
-  @media screen and (min-width: 48rem) {
+  @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
       max-inline-size: 33rem;
-      margin-block-start: map.get(s.$spacing, 500);
-      margin-block-end: map.get(s.$spacing, 0);
+      margin-block-start: map.get(v.$spacing, 500);
+      margin-block-end: map.get(v.$spacing, 0);
   }
 
-  @media screen and (min-width: 90rem) {
-    margin: 4.469rem map.get(s.$spacing, 800) 4.469rem 0;
+  @media screen and (min-width: map.get(v.$breakpoint, desktop)) {
+    margin: 4.469rem map.get(v.$spacing, 800) 4.469rem 0;
     max-inline-size: 23.5rem;
   }
 }
 
 .container--success {
   max-inline-size: 20.438rem;
-  margin: 9.313rem map.get(s.$spacing, 300) 4.375rem;
+  margin: 9.313rem map.get(v.$spacing, 300) 4.375rem;
   @media screen and (min-width: 48rem) {
       max-inline-size: 23.5rem;
-      margin: 3.75rem map.get(s.$spacing, 800);
+      margin: 3.75rem map.get(v.$spacing, 800);
   }
 }

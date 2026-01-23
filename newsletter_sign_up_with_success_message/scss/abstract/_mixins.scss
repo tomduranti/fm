@@ -1,10 +1,9 @@
-@use "./spacing" as s;
-@use "./typography" as t;
+@use "./variables" as v;
 @use "sass:list";
 @use "sass:map";
 
 @mixin text_preset($font_family, $font_size: 16, $font_weight: 400, $line_height: null, $letter_spacing: 0, $color: null) {
-    font-family: t.$font_family;
+    font-family: v.$font_family;
     font-size: $font_size;
     font-weight: $font_weight;
     line-height: $line_height;
@@ -15,10 +14,10 @@
 //TODO: needs refactoring for full shorthand
 @mixin spacing($property, $size, $side...) {
     @if list.length($side) == 0 {
-        #{$property}: map.get(s.$spacing, $size);
+        #{$property}: map.get(v.$spacing, $size);
     } @else {
         @for $i from 0 to list.length($side) {
-            #{$property}-#{list.nth($side, $i + 1)}: map.get(s.$spacing, $size);
+            #{$property}-#{list.nth($side, $i + 1)}: map.get(v.$spacing, $size);
         }
     }
 }

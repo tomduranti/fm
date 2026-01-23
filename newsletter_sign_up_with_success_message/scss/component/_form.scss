@@ -1,12 +1,11 @@
-@use "../abstract/color" as c;
-@use "../abstract/spacing" as s;
+@use "../abstract/variables" as v;
 @use "../component/button";
 @use "sass:map";
 
 .form {
     display: flex;
     flex-direction: column;
-    gap: map.get(s.$spacing, 100);
+    gap: map.get(v.$spacing, 100);
 
     & > *:focus-visible {
         outline: 2px solid black;
@@ -14,20 +13,20 @@
 
     &__email {
         @extend %button;
-        outline-color: c.$grey;
-        margin-block-end: map.get(s.$spacing, 200);
+        outline-color: v.$grey;
+        margin-block-end: map.get(v.$spacing, 200);
 
-        @media screen and (min-width: 48rem) {
-            margin-block-end: map.get(s.$spacing, 100);
+        @media screen and (min-width: map.get(v.$breakpoint, tablet)) {
+            margin-block-end: map.get(v.$spacing, 100);
         }
 
-        @media screen and (min-width: 90rem) {
-            margin-block-end: map.get(s.$spacing, 200);
+        @media screen and (min-width: map.get(v.$breakpoint, desktop)) {
+            margin-block-end: map.get(v.$spacing, 200);
         }
     }
 
     .error {
-        color: map.get(c.$red, 200);
+        color: map.get(v.$red, 200);
     }
 
     .email_label {
