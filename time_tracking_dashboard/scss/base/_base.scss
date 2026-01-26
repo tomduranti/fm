@@ -1,0 +1,11 @@
+@use "../abstract/variables" as v;
+
+.page_wrapper {
+    height: 100vh;
+    background-color: v.$black--bg;
+}
+
+.container {
+    inline-size: 100%;
+    max-inline-size: 20.438;
+}

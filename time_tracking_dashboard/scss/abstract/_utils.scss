@@ -2,6 +2,10 @@
 @use "./mixins" as m;
 @use "sass:map";
 
-%text_preset_light { @include m.text_preset(v.$font_family, clamp(), map.get(v.$fw, "light"), v.$white) };
-.text_preset_4 { @include m.text_preset(v.$font_family, map.get(v.$fs, 24), map.get(v.$fw, "light"), 1.16, v.$white) };
-.text_preset_6 { @include m.text_preset(v.$font_family, map.get(v.$fs, 15), map.get(v.$fw, "regular"), 2.7, v.$navy--200) };
+.text_preset_1 { @include m.text_preset(v.$font_family, map.get(v.$fs, 56), map.get(v.$fw, "light"), 1.17, 0, v.$white) };
+.text_preset_2 { @include m.text_preset(v.$font_family, map.get(v.$fs, 40), map.get(v.$fw, "light"), 1.17, 0, v.$white) };
+.text_preset_3 { @include m.text_preset(v.$font_family, map.get(v.$fs, 32), map.get(v.$fw, "light"), 1.18, 0, v.$white) };
+.text_preset_4 { @include m.text_preset(v.$font_family, map.get(v.$fs, 24), map.get(v.$fw, "light"), 1.16, 0, v.$white) };
+.text_preset_5--medium { @include m.text_preset(v.$font_family, map.get(v.$fs, 18), map.get(v.$fw, "medium"), 1.16, 0, v.$white) };
+.text_preset_5--regular { @include m.text_preset(v.$font_family, map.get(v.$fs, 18), map.get(v.$fw, "regular"), 1.16, 0, v.$white) };
+.text_preset_6 { @include m.text_preset(v.$font_family, map.get(v.$fs, 15), map.get(v.$fw, "regular"), 1.2, 0, v.$navy--200) };

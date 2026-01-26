@@ -1,0 +1,97 @@
+.text_preset_1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.17;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 100%);
+}
+
+.text_preset_2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  line-height: 1.17;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 100%);
+}
+
+.text_preset_3 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 100%);
+}
+
+.text_preset_4 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.16;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 100%);
+}
+
+.text_preset_5--medium {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 100%);
+}
+
+.text_preset_5--regular {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 100%);
+}
+
+.text_preset_6 {
+  font-family: "Rubik", sans-serif;
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: hsl(236, 100%, 87%);
+}
+
+.page_wrapper {
+  height: 100vh;
+  background-color: hsl(0, 0%, 12%);
+}
+
+.container {
+  inline-size: 100%;
+  max-inline-size: 20.438;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20.438rem);
+  gap: 1.5rem;
+  border-radius: 0.938rem;
+}
+.grid__report_summary {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 0.938rem;
+}
+.grid__avatar_info {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 1.5rem;
+  padding: 32px 36px 37px 32px;
+}
+.grid__avatar_name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.grid__avatar_img {
+  inline-size: 4rem;
+  block-size: 4rem;
+  border-radius: 50%;
+  outline: 3px solid hsl(0, 100%, 100%);
+}
