@@ -3,7 +3,9 @@
 .grid {
     display: grid;
     justify-self: center;
-    grid-template-columns: 1fr;
+    justify-content: center;
+    inline-size: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 87.2vw, 450px), 1fr));
     @include m.spacing(gap, 300);
     border-radius: .938rem;
 }

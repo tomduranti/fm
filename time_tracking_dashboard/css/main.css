@@ -68,11 +68,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.container {
-  inline-size: 100%;
-  max-inline-size: 20.438rem;
+  height: 143.5vh;
 }
 
 .report_summary {
@@ -85,7 +81,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  padding: 2rem 2rem 2.25rem 2.25rem;
+  padding: 2rem 2rem 2.313rem 2.25rem;
 }
 .report_summary__avatar_name {
   display: flex;
@@ -96,14 +92,14 @@ body {
   inline-size: 4rem;
   block-size: 4rem;
   border-radius: 50%;
-  border: 3px solid hsl(0, 100%, 100%);
+  border: 0.188rem solid hsl(0, 100%, 100%);
 }
 .report_summary__time_range {
   display: flex;
   justify-content: center;
   gap: 3rem;
   padding-block-start: 1.5rem;
-  padding-block-end: 1.5rem;
+  padding-block-end: 1.563rem;
 }
 .report_summary__time_range > *:hover {
   cursor: pointer;
@@ -147,25 +143,27 @@ body {
 }
 
 .study {
-  background: hsl(348, 100%, 68%) url("../../assets/icon_study.svg") no-repeat 93.5% -14%;
+  background: hsl(348, 100%, 68%) url("../../assets/icon_study.svg") no-repeat 93.5% -8%;
 }
 
 .exercise {
-  background: hsl(145, 58%, 55%) url("../../assets/icon_exercise.svg") no-repeat 93.5% -14%;
+  background: hsl(145, 58%, 55%) url("../../assets/icon_exercise.svg") no-repeat 93.5% -1%;
 }
 
 .social {
-  background: hsl(264, 64%, 52%) url("../../assets/icon_social.svg") no-repeat 93.5% -14%;
+  background: hsl(264, 64%, 52%) url("../../assets/icon_social.svg") no-repeat 93.5% -25%;
 }
 
 .self_care {
-  background: hsl(43, 84%, 65%) url("../../assets/icon_self_care.svg") no-repeat 93.5% -14%;
+  background: hsl(43, 84%, 65%) url("../../assets/icon_self_care.svg") no-repeat 93.5% -12%;
 }
 
 .grid {
   display: grid;
   justify-self: center;
-  grid-template-columns: 1fr;
+  justify-content: center;
+  inline-size: 80%;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 87.2vw, 450px), 1fr));
   gap: 1.5rem;
   border-radius: 0.938rem;
 }

@@ -9,11 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container {
-    inline-size: 100%;
-    max-inline-size: 20.438rem;
+    height: 143.5vh;
 }
 
 .report_summary {
@@ -26,7 +22,7 @@ body {
         display: flex;
         align-items: center;
         @include m.spacing(gap, 300);
-        padding: map-get(v.$spacing, 400) map-get(v.$spacing, 400) 2.25rem 2.25rem;
+        padding: map-get(v.$spacing, 400) map-get(v.$spacing, 400) 2.313rem 2.25rem;
     }
 
     &__avatar_name {
@@ -39,7 +35,7 @@ body {
         inline-size: 4rem;
         block-size: 4rem;
         border-radius: map-get(v.$border_radius, circle);
-        border: 3px solid v.$white;
+        border: .188rem solid v.$white;
     }
 
     &__time_range {
@@ -47,7 +43,7 @@ body {
         justify-content: center;
         @include m.spacing(gap, 600);
         @include m.spacing(padding-block-start, 300);
-        @include m.spacing(padding-block-end, 300);
+        padding-block-end: 1.563rem; //magic number to follow design
 
         &>*:hover {
             cursor: pointer;
@@ -88,17 +84,17 @@ body {
 }
 
 .study {
-    background: v.$pink url("../../assets/icon_study.svg") no-repeat 93.5% -14%;
+    background: v.$pink url("../../assets/icon_study.svg") no-repeat 93.5% -8%;
 }
 
 .exercise {
-    background: v.$green url("../../assets/icon_exercise.svg") no-repeat 93.5% -14%;
+    background: v.$green url("../../assets/icon_exercise.svg") no-repeat 93.5% -1%;
 }
 
 .social {
-    background: v.$purple--700 url("../../assets/icon_social.svg") no-repeat 93.5% -14%;
+    background: v.$purple--700 url("../../assets/icon_social.svg") no-repeat 93.5% -25%;
 }
 
 .self_care {
-    background: v.$yellow url("../../assets/icon_self_care.svg") no-repeat 93.5% -14%;
+    background: v.$yellow url("../../assets/icon_self_care.svg") no-repeat 93.5% -12%;
 }
