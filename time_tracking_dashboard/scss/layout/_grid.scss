@@ -1,11 +1,17 @@
 @use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
 
 .grid {
     display: grid;
-    justify-self: center;
-    justify-content: center;
-    inline-size: 80%;
     grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 87.2vw, 450px), 1fr));
     @include m.spacing(gap, 300);
     border-radius: .938rem;
+
+    @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+        grid-template-columns: repeat(3, 1fr);
+
+        &> :first-child {
+            grid-column: span 3 / span 3;
+        }
+    }
 }

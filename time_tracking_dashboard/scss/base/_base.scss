@@ -10,6 +10,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 143.5vh;
+
+    @media screen and (min-width: 48rem) {
+        height: 100vh;
+    }
 }
 
 .report_summary {
@@ -57,21 +61,35 @@ body {
     border-radius: inherit;
     padding-block-start: 2.375rem; //magic number to follow design
 
-    &__data {
+    &__container {
         background-color: v.$navy--900;
         border-radius: inherit;
         padding: 1.719rem map-get(v.$spacing, 300);
+
+        @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+            padding: 1.594rem 1.344rem;
+        }
     }
 
-    &__activity {
+    &__header {
         margin-block-end: .469rem; //magic number to follow design
+        @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+            @include m.spacing(margin-block-end, 200);
+        }
     }
 
-    &__activity,
-    &__time_comparison {
+    &__header,
+    &__body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &__body {
+        @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+            flex-direction: column;
+            @include m.spacing(gap, 100);
+        }
     }
 }
 
