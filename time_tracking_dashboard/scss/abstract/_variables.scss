@@ -29,7 +29,9 @@ $fw: (
 $fs: (
     15: $base_typography_unit - .062,
     16: $base_typography_unit,
+    18: $base_typography_unit + .125,
     24: $base_typography_unit * 1.5,
+    32: $base_typography_unit * 2,
     56: $base_typography_unit * 3.5,
 );
 
@@ -42,6 +44,7 @@ $spacing: (
   300:  $base_spacing_unit * 3,       // 24px
   400:  $base_spacing_unit * 4,       // 32px
   500:  $base_spacing_unit * 5,       // 40px
+  600:  $base_spacing_unit * 6,       // 48px
 );
 
 //BORDER

@@ -1,11 +1,104 @@
+@use "../abstract/mixins" as m;
 @use "../abstract/variables" as v;
 
-.page_wrapper {
-    height: 100vh;
+body {
     background-color: v.$black--bg;
+}
+
+.page_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     inline-size: 100%;
-    max-inline-size: 20.438;
+    max-inline-size: 20.438rem;
+}
+
+.report_summary {
+    background-color: v.$navy--900;
+    border-radius: inherit;
+
+    &__avatar_info {
+        background-color: v.$purple--600;
+        border-radius: inherit;
+        display: flex;
+        align-items: center;
+        @include m.spacing(gap, 300);
+        padding: map-get(v.$spacing, 400) map-get(v.$spacing, 400) 2.25rem 2.25rem;
+    }
+
+    &__avatar_name {
+        display: flex;
+        flex-direction: column;
+        @include m.spacing(gap, 100);
+    }
+
+    &__avatar_img {
+        inline-size: 4rem;
+        block-size: 4rem;
+        border-radius: map-get(v.$border_radius, circle);
+        border: 3px solid v.$white;
+    }
+
+    &__time_range {
+        display: flex;
+        justify-content: center;
+        @include m.spacing(gap, 600);
+        @include m.spacing(padding-block-start, 300);
+        @include m.spacing(padding-block-end, 300);
+
+        &>*:hover {
+            cursor: pointer;
+            @include m.transition(color .3s ease);
+            color: v.$white;
+        }
+    }
+}
+
+.item {
+    border-radius: inherit;
+    padding-block-start: 2.375rem; //magic number to follow design
+
+    &__data {
+        background-color: v.$navy--900;
+        border-radius: inherit;
+        padding: 1.719rem map-get(v.$spacing, 300);
+    }
+
+    &__activity {
+        margin-block-end: .469rem; //magic number to follow design
+    }
+
+    &__activity,
+    &__time_comparison {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.work {
+    background: v.$orange url("../../assets/icon_work.svg") no-repeat 93.5% -14%;
+}
+
+.play {
+    background: v.$blue url("../../assets/icon_play.svg") no-repeat 93.5% -14%;
+}
+
+.study {
+    background: v.$pink url("../../assets/icon_study.svg") no-repeat 93.5% -14%;
+}
+
+.exercise {
+    background: v.$green url("../../assets/icon_exercise.svg") no-repeat 93.5% -14%;
+}
+
+.social {
+    background: v.$purple--700 url("../../assets/icon_social.svg") no-repeat 93.5% -14%;
+}
+
+.self_care {
+    background: v.$yellow url("../../assets/icon_self_care.svg") no-repeat 93.5% -14%;
 }
