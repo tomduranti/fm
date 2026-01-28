@@ -31,6 +31,13 @@ body {
         @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
             padding: 2.156rem 20.18rem 2.156rem map-get(v.$spacing, 400); //magic number to follow design
         }
+
+        @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+            flex-direction: column;
+            align-items: start;
+            @include m.spacing(gap, 500);
+            padding: 2rem 2.5rem 5.75rem map-get(v.$spacing, 400);
+        }
     }
 
     &__avatar_name {
@@ -44,6 +51,13 @@ body {
         block-size: 4rem;
         border-radius: map-get(v.$border_radius, circle);
         border: .188rem solid v.$white;
+        box-shadow: 0 4px 4px hsl(0 0% 0% / 0.25);
+
+        @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+            inline-size: 4.875rem;
+            block-size: 4.875rem;
+            @include m.spacing(gap, 500);
+        }
     }
 
     &__time_range {
@@ -55,6 +69,14 @@ body {
 
         @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
             gap: 4rem;
+        }
+
+        @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+            flex-direction: column;
+            gap: 1.313rem;
+            padding-block-start: 1.75rem; //magic number to follow design
+            padding-block-end: 1.75rem; //magic number to follow design
+            @include m.spacing(padding-inline-start, 400);
         }
 
         &>*:hover {
@@ -73,6 +95,10 @@ body {
         padding-block-start: 2.063rem; //magic number to follow design
     }
 
+    @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+        padding-block-start: 2.813rem; //magic number to follow design
+    }
+
     &__container {
         background-color: v.$navy--900;
         border-radius: inherit;
@@ -81,6 +107,10 @@ body {
         @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
             padding: 1.594rem 1.344rem;
         }
+
+        @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+            padding: 2rem 2.031rem;
+        }
     }
 
     &__header {
@@ -88,7 +118,10 @@ body {
 
         @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
             @include m.spacing(margin-block-end, 200);
-            // background-size: 58px 58px;
+        }
+
+        @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+            @include m.spacing(margin-block-end, 300);
         }
     }
 
@@ -115,6 +148,10 @@ body {
         background-size: 58px 58px; //magic number to follow design
         background-position: 93.5% -4%;
     }
+
+    @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+        background-size: 78px 78px; //magic number to follow design
+    }
 }
 
 .play {
@@ -124,6 +161,11 @@ body {
         background-size: 58px 58px; //magic number to follow design
         background-position: 90% -2%;
     }
+
+    @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+        background-size: 90px 90px; //magic number to follow design
+        background-position: 90% -5%;
+    }
 }
 
 .study {
@@ -131,6 +173,11 @@ body {
 
     @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
         background-size: 58px 58px; //magic number to follow design
+        background-position: 90% -2%;
+    }
+
+    @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+        background-size: 78px 78px; //magic number to follow design
         background-position: 90% -2%;
     }
 }
@@ -142,6 +189,11 @@ body {
         background-size: 58px 40px; //magic number to follow design
         background-position: 90% 0;
     }
+
+    @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+        background-size: 80px 54px; //magic number to follow design
+        background-position: 90% 0;
+    }
 }
 
 .social {
@@ -151,6 +203,11 @@ body {
         background-size: 54px 73px; //magic number to follow design
         background-position: 95% -7%;
     }
+
+    @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+        background-size: 74px 100px; //magic number to follow design
+        background-position: 90% -10%;
+    }
 }
 
 .self_care {
@@ -159,5 +216,10 @@ body {
     @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
         background-size: 54px 48px; //magic number to follow design
         background-position: 89% -5%;
+    }
+
+    @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+        background-size: 72px 66px; //magic number to follow design
+        background-position: 90% -5%;
     }
 }
