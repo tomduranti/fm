@@ -9,11 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 143.5vh;
-
-    @media screen and (min-width: 48rem) {
-        height: 100vh;
-    }
+    height: 100svh;
 }
 
 .report_summary {
@@ -40,10 +36,19 @@ body {
         }
     }
 
-    &__avatar_name {
+    &__avatar_details {
         display: flex;
         flex-direction: column;
         @include m.spacing(gap, 100);
+    }
+
+    .avatar_name {
+
+        //updates font-size and line-height
+        @media screen and (min-width: map-get(v.$breakpoint, desktop)) {
+            font-size: map-get(v.$fs, 40);
+            line-height: 1.17;
+        }
     }
 
     &__avatar_img {
@@ -103,6 +108,8 @@ body {
         background-color: v.$navy--900;
         border-radius: inherit;
         padding: 1.719rem map-get(v.$spacing, 300);
+        //to stop pixel bleeding over the navy-colored padding
+        box-shadow: 0 0 0 .1px v.$navy--900;
 
         @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
             padding: 1.594rem 1.344rem;
@@ -139,7 +146,17 @@ body {
             align-items: start;
         }
     }
+
+    .current_hours {
+
+        //updates font-size and line-height
+        @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+            font-size: map-get(v.$fs, 56);
+            line-height: 1.178;
+        }
+    }
 }
+
 
 .work {
     background: v.$orange url("../../assets/icon_work.svg") no-repeat 93.5% -14%;
