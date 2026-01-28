@@ -8,7 +8,8 @@
     border-radius: .938rem;
 
     @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
-        grid-template-columns: repeat(3, 1fr);
+        // grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(clamp(180px, 24.2vw, 500px), 1fr));
 
         &> :first-child {
             grid-column: span 3 / span 3;
