@@ -2,7 +2,7 @@
   font-family: "Rubik", sans-serif;
   font-size: 3.5rem;
   font-weight: 300;
-  line-height: 1.17;
+  line-height: 1.178;
   letter-spacing: 0;
   color: hsl(0, 100%, 100%);
 }
@@ -88,6 +88,11 @@ body {
   gap: 1.5rem;
   padding: 2rem 2rem 2.313rem 2.25rem;
 }
+@media screen and (min-width: 48rem) {
+  .report_summary__avatar_info {
+    padding: 2.156rem 20.18rem 2.156rem 2rem;
+  }
+}
 .report_summary__avatar_name {
   display: flex;
   flex-direction: column;
@@ -105,6 +110,11 @@ body {
   gap: 3rem;
   padding-block-start: 1.5rem;
   padding-block-end: 1.563rem;
+}
+@media screen and (min-width: 48rem) {
+  .report_summary__time_range {
+    gap: 4rem;
+  }
 }
 .report_summary__time_range > *:hover {
   cursor: pointer;
@@ -124,6 +134,11 @@ body {
 .item {
   border-radius: inherit;
   padding-block-start: 2.375rem;
+}
+@media screen and (min-width: 48rem) {
+  .item {
+    padding-block-start: 2.063rem;
+  }
 }
 .item__container {
   background-color: hsl(235, 46%, 20%);
@@ -152,31 +167,68 @@ body {
   .item__body {
     flex-direction: column;
     gap: 0.5rem;
+    align-items: start;
   }
 }
 
 .work {
   background: hsl(15, 100%, 70%) url("../../assets/icon_work.svg") no-repeat 93.5% -14%;
 }
+@media screen and (min-width: 48rem) {
+  .work {
+    background-size: 58px 58px;
+    background-position: 93.5% -4%;
+  }
+}
 
 .play {
   background: hsl(195, 74%, 62%) url("../../assets/icon_play.svg") no-repeat 93.5% -14%;
+}
+@media screen and (min-width: 48rem) {
+  .play {
+    background-size: 58px 58px;
+    background-position: 90% -2%;
+  }
 }
 
 .study {
   background: hsl(348, 100%, 68%) url("../../assets/icon_study.svg") no-repeat 93.5% -8%;
 }
+@media screen and (min-width: 48rem) {
+  .study {
+    background-size: 58px 58px;
+    background-position: 90% -2%;
+  }
+}
 
 .exercise {
   background: hsl(145, 58%, 55%) url("../../assets/icon_exercise.svg") no-repeat 93.5% -1%;
+}
+@media screen and (min-width: 48rem) {
+  .exercise {
+    background-size: 58px 40px;
+    background-position: 90% 0;
+  }
 }
 
 .social {
   background: hsl(264, 64%, 52%) url("../../assets/icon_social.svg") no-repeat 93.5% -25%;
 }
+@media screen and (min-width: 48rem) {
+  .social {
+    background-size: 54px 73px;
+    background-position: 95% -7%;
+  }
+}
 
 .self_care {
   background: hsl(43, 84%, 65%) url("../../assets/icon_self_care.svg") no-repeat 93.5% -12%;
+}
+@media screen and (min-width: 48rem) {
+  .self_care {
+    background-size: 54px 48px;
+    background-position: 89% -5%;
+  }
 }
 
 .grid {

@@ -3,7 +3,7 @@
 @use "sass:map";
 
 .text_preset_1 {
-    @include m.text_preset(v.$font_family, map.get(v.$fs, 56), map.get(v.$fw, "light"), 1.17, 0, v.$white);
+    @include m.text_preset(v.$font_family, map.get(v.$fs, 56), map.get(v.$fw, "light"), 1.178, 0, v.$white);
 }
 
 .text_preset_2 {

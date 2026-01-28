@@ -27,6 +27,10 @@ body {
         align-items: center;
         @include m.spacing(gap, 300);
         padding: map-get(v.$spacing, 400) map-get(v.$spacing, 400) 2.313rem 2.25rem;
+
+        @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+            padding: 2.156rem 20.18rem 2.156rem map-get(v.$spacing, 400); //magic number to follow design
+        }
     }
 
     &__avatar_name {
@@ -49,6 +53,10 @@ body {
         @include m.spacing(padding-block-start, 300);
         padding-block-end: 1.563rem; //magic number to follow design
 
+        @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+            gap: 4rem;
+        }
+
         &>*:hover {
             cursor: pointer;
             @include m.transition(color .3s ease);
@@ -60,6 +68,10 @@ body {
 .item {
     border-radius: inherit;
     padding-block-start: 2.375rem; //magic number to follow design
+
+    @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+        padding-block-start: 2.063rem; //magic number to follow design
+    }
 
     &__container {
         background-color: v.$navy--900;
@@ -73,8 +85,10 @@ body {
 
     &__header {
         margin-block-end: .469rem; //magic number to follow design
+
         @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
             @include m.spacing(margin-block-end, 200);
+            // background-size: 58px 58px;
         }
     }
 
@@ -89,30 +103,61 @@ body {
         @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
             flex-direction: column;
             @include m.spacing(gap, 100);
+            align-items: start;
         }
     }
 }
 
 .work {
     background: v.$orange url("../../assets/icon_work.svg") no-repeat 93.5% -14%;
+
+    @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+        background-size: 58px 58px; //magic number to follow design
+        background-position: 93.5% -4%;
+    }
 }
 
 .play {
     background: v.$blue url("../../assets/icon_play.svg") no-repeat 93.5% -14%;
+
+    @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+        background-size: 58px 58px; //magic number to follow design
+        background-position: 90% -2%;
+    }
 }
 
 .study {
     background: v.$pink url("../../assets/icon_study.svg") no-repeat 93.5% -8%;
+
+    @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+        background-size: 58px 58px; //magic number to follow design
+        background-position: 90% -2%;
+    }
 }
 
 .exercise {
     background: v.$green url("../../assets/icon_exercise.svg") no-repeat 93.5% -1%;
+
+    @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+        background-size: 58px 40px; //magic number to follow design
+        background-position: 90% 0;
+    }
 }
 
 .social {
     background: v.$purple--700 url("../../assets/icon_social.svg") no-repeat 93.5% -25%;
+
+    @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+        background-size: 54px 73px; //magic number to follow design
+        background-position: 95% -7%;
+    }
 }
 
 .self_care {
     background: v.$yellow url("../../assets/icon_self_care.svg") no-repeat 93.5% -12%;
+
+    @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
+        background-size: 54px 48px; //magic number to follow design
+        background-position: 89% -5%;
+    }
 }
