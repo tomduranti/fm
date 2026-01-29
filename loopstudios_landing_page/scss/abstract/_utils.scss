@@ -1,0 +1,36 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+@use "./functions" as function;
+@use "sass:map";
+
+//TODO: refactor preset and its mixin
+%text_preset_font_family_1 { @include m.text_preset(v.$font_family_1, function.to_rem(72), map.get(v.$fw, "light"), 1, 0, v.$black) }
+
+.text_preset_1 { 
+    @extend %text_preset_font_family_1 
+};
+
+.text_preset_2 { 
+    @extend %text_preset_font_family_1;
+    font-size: function.to_rem(48);
+ };
+
+.text_preset_3 { 
+    @extend %text_preset_font_family_1;
+    font-size: function.to_rem(40);
+    color: v.$white;
+ };
+
+.text_preset_4 { 
+    @extend %text_preset_font_family_1;
+    font-size: function.to_rem(32);
+ };
+
+.text_preset_5 { 
+    @extend %text_preset_font_family_1;
+    font-size: function.to_rem(25);
+    color: v.$white;
+ };
+
+.text_preset_6 { @include m.text_preset(v.$font_family_2, function.to_rem(15), map.get(v.$fw, "regular"), 1.65, 0, v.$white) };
+.text_preset_7 { @include m.text_preset(v.$font_family_2, function.to_rem(14), map.get(v.$fw, "regular"), 1, 5px, v.$black) };

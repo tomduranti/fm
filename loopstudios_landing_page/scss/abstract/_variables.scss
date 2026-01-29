@@ -1,0 +1,31 @@
+@use "./functions" as function;
+
+//COLORS
+$white: hsl(0°, 100%, 100%);
+$black: hsl(0°, 0%, 0%);
+$grey: hsl(0°, 0%, 85%);
+$blue--100: hsl(215°, 30%, 92%);
+$blue--50: hsl(213°, 100%, 98%);
+$gradient: linear-gradient(60deg, hsl(0°, 0%, 0%), hsl(0°, 0%, 0%));
+
+//TYPOGRAPHY
+$font_family_1: "Josefin Sans", sans-serif;
+$font_family_2: "Alata", sans-serif;
+
+$fw: (
+    "light": 300,
+    "regular": 400,
+);
+
+//SPACING
+$spacing: (
+  0:    0,       
+  8:   function.to_rem(8),  
+  16:  function.to_rem(16),
+  24:  function.to_rem(24),
+  32:  function.to_rem(32),
+  40:  function.to_rem(40),
+  48:  function.to_rem(48),
+  64:  function.to_rem(64),
+  80:  function.to_rem(80),
+);

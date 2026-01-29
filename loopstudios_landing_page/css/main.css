@@ -1,0 +1,44 @@
+.text_preset_5, .text_preset_4, .text_preset_3, .text_preset_2, .text_preset_1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0;
+  color: hsl(0, 0%, 0%);
+}
+
+.text_preset_2 {
+  font-size: 3rem;
+}
+
+.text_preset_3 {
+  font-size: 2.5rem;
+  color: hsl(0, 100%, 100%);
+}
+
+.text_preset_4 {
+  font-size: 2rem;
+}
+
+.text_preset_5 {
+  font-size: 1.5625rem;
+  color: hsl(0, 100%, 100%);
+}
+
+.text_preset_6 {
+  font-family: "Alata", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 100%);
+}
+
+.text_preset_7 {
+  font-family: "Alata", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 5px;
+  color: hsl(0, 0%, 0%);
+}
