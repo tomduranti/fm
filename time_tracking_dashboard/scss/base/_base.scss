@@ -68,6 +68,7 @@ body {
     &__time_range {
         display: flex;
         justify-content: center;
+        align-items: flex-start;
         @include m.spacing(gap, 600);
         @include m.spacing(padding-block-start, 300);
         padding-block-end: 1.563rem; //magic number to follow design
@@ -84,8 +85,8 @@ body {
             @include m.spacing(padding-inline-start, 400);
         }
 
-        &>*:hover {
-            cursor: pointer;
+        &>*:hover,
+        &>*:focus-visible {
             @include m.transition(color .3s ease);
             color: v.$white;
         }
@@ -95,6 +96,11 @@ body {
 .item {
     border-radius: inherit;
     padding-block-start: 2.375rem; //magic number to follow design
+    
+
+    &:hover &__container { 
+        background-color: v.$navy--800;
+    }
 
     @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
         padding-block-start: 2.063rem; //magic number to follow design
@@ -110,6 +116,7 @@ body {
         padding: 1.719rem map-get(v.$spacing, 300);
         //to stop pixel bleeding over the navy-colored padding
         box-shadow: 0 0 0 .1px v.$navy--900;
+        @include m.transition(background-color .3s ease);
 
         @media screen and (min-width: map-get(v.$breakpoint, tablet)) {
             padding: 1.594rem 1.344rem;

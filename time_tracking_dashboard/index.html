@@ -29,13 +29,13 @@
                             </div>
                         </div>
                         <div class="report_summary__time_range">
-                            <span class="text_preset_5--regular">Daily</span>
-                            <span class="text_preset_5--regular">Weekly</span>
-                            <span class="text_preset_5--regular">Monthly</span>
+                            <button class="period_selectors text_preset_5--regular" data-timeframe="daily">Daily</button>
+                            <button class="period_selectors text_preset_5--regular" id="default_data_onload"data-timeframe="weekly">Weekly</button>
+                            <button class="period_selectors text_preset_5--regular" data-timeframe="monthly">Monthly</button>
                         </div>
                     </div>
 
-                    <div class="work item">
+                    <div class="work item" data-activity="work">
                         <div class="item__container">
                             <div class="item__header">
                                 <h3 class="text_preset_5--medium">Work</h3>
@@ -43,12 +43,14 @@
                             </div>
                             <div class="item__body">
                                 <span class="current_hours text_preset_3">32hrs</span>
-                                <span class="previous_hours text_preset_6">Last Week - 36hrs</span>
+                                <span class="text_preset_6">
+                                    <span class="previous_events">Last Week</span> - <span class="previous_hours">36hrs</span>
+                                </span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="play item">
+                    <div class="play item" data-activity="play">
                         <div class="item__container">
                             <div class="item__header">
                                 <h3 class="text_preset_5--medium">Play</h3>
@@ -56,12 +58,14 @@
                             </div>
                             <div class="item__body">
                                 <span class="current_hours text_preset_3">10hrs</span>
-                                <span class="previous_hours text_preset_6">Last Week - 36hrs</span>
+                                <span class="text_preset_6">
+                                    <span class="previous_events">Last Week</span> - <span class="previous_hours">36hrs</span>
+                                </span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="study item">
+                    <div class="study item" data-activity="study">
                         <div class="item__container">
                             <div class="item__header">
                                 <h3 class="text_preset_5--medium">Study</h3>
@@ -69,12 +73,14 @@
                             </div>
                             <div class="item__body">
                                 <span class="current_hours text_preset_3">4hrs</span>
-                                <span class="previous_hours text_preset_6">Last Week - 7hrs</span>
+                                <span class="text_preset_6">
+                                    <span class="previous_events">Last Week</span> - <span class="previous_hours">7hrs</span>
+                                </span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="exercise item">
+                    <div class="exercise item" data-activity="exercise">
                         <div class="item__container">
                             <div class="item__header">
                                 <h3 class="text_preset_5--medium">Exercise</h3>
@@ -82,12 +88,14 @@
                             </div>
                             <div class="item__body">
                                 <span class="current_hours text_preset_3">4hrs</span>
-                                <span class="previous_hours text_preset_6">Last Week - 5hrs</span>
+                                <span class="text_preset_6">
+                                    <span class="previous_events">Last Week</span> - <span class="previous_hours">5hrs</span>
+                                </span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="social item">
+                    <div class="social item" data-activity="social">
                         <div class="item__container">
                             <div class="item__header">
                                 <h3 class="text_preset_5--medium">Social</h3>
@@ -95,12 +103,14 @@
                             </div>
                             <div class="item__body">
                                 <span class="current_hours text_preset_3">5hrs</span>
-                                <span class="previous_hours text_preset_6">Last Week - 10hrs</span>
+                                <span class="text_preset_6">
+                                    <span class="previous_events">Last Week</span> - <span class="previous_hours">10hrs</span>
+                                </span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="self_care item">
+                    <div class="self_care item" data-activity="self care">
                         <div class="item__container">
                             <div class="item__header">
                                 <h3 class="text_preset_5--medium">Self Care</h3>
@@ -108,7 +118,9 @@
                             </div>
                             <div class="item__body">
                                 <span class="current_hours text_preset_3">2hrs</span>
-                                <span class="previous_hours text_preset_6">Last Week - 2hrs</span>
+                                <span class="text_preset_6">
+                                    <span class="previous_events">Last Week</span> - <span class="previous_hours">2hrs</span>
+                                </span>
                             </div>
                         </div>
                     </div>

@@ -24,4 +24,5 @@ input, button, textarea, select, a {
   font: inherit;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }

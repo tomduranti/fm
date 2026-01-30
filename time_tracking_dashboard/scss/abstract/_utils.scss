@@ -22,3 +22,6 @@
     @include m.text_preset(v.$font_family, map.get(v.$fs, 15), map.get(v.$fw, "regular"), 1.2, 0, v.$navy--200);
 }
 
+.focus {
+    color: v.$white;
+}
