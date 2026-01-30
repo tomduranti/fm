@@ -86,7 +86,8 @@ body {
         }
 
         &>*:hover,
-        &>*:focus-visible {
+        &>*:focus-visible,
+        &>*:focus {
             @include m.transition(color .3s ease);
             color: v.$white;
         }
@@ -144,6 +145,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap; //to accomodate for extremely long numbers
     }
 
     &__body {

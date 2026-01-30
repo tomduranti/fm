@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     await getDataFromJSON();
 
     //default state to show on page load
+    defaultStateOnLoad.classList.add("focus_visible"); //disable :focus-visible ring on initial page load
+    defaultStateOnLoad.focus();
+
     //TODO use a function instead
     for (const obj of dataset) {
         const match = [...dataActivityElements].find(dataAttrElement =>
@@ -50,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     periodSelectors.forEach((periodSelector) => {
         periodSelector.addEventListener("click", () => {
 
-            //TODO add a focus on the clicked button
+        defaultStateOnLoad.classList.remove("focus_visible"); //enable :focus-visible ring on initial page load
 
             for (const obj of dataset) {
                 //matches JSON obj.title with html data- element 
